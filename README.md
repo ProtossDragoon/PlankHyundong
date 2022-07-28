@@ -19,6 +19,8 @@
 
 `TODO`
 
+- 모든 실험 내역들을 [wandb 프로젝트](https://wandb.ai/plank-hyundong/plank-hyundong)에서 확인할 수 있습니다.
+
 ## 빠른 실행
 
 ### 환경
