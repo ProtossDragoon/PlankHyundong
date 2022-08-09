@@ -1,4 +1,14 @@
-![logo](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/735c8ec9-581e-45e1-803c-4863b654037c/logo-color.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220809%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220809T114635Z&X-Amz-Expires=86400&X-Amz-Signature=88929d7e464c9b4efd1b8b3d7a6f027a32acee18de49d37ca165489fcfd90310&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22logo-color.png%22&x-id=GetObject)
+![logo](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/0824bc5e-5361-4b1d-a1ea-4c223c52c136/logo-no-background.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220809%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220809T133739Z&X-Amz-Expires=86400&X-Amz-Signature=e7b104cd2f7696708f0f06cc5519d63530543733a790a76679b669fdc9e63aa7&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22logo-no-background.svg%22&x-id=GetObject)
+
+<br>
+
+<div align="center">
+
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FProtossDragoon%2FPlankHyundong&count_bg=%23FFA217&title_bg=%2345FFDE&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com) 
+
+</div>
+
+<br>
 
 # 플랭크 현동 3D
 
