@@ -25,24 +25,24 @@
     <th>누끼 제거</th>
   </tr>
 </thead>
-<tbody>
+<tbody align="center">
   <tr>
     <td>RGB</td>
-    <td align="center"><img src=https://github.com/ProtossDragoon/NeRF-TF2-Keras/blob/master/docs/result.gif alt="" width="200" height="200"></td>
-    <td align="center"><img src=https://github.com/ProtossDragoon/NeRF-TF2-Keras/blob/master/docs/result_2.gif alt="" width="200" height="200"></td>
-    <td align="center"><img src=https://github.com/ProtossDragoon/NeRF-TF2-Keras/blob/master/docs/result_3.gif alt="" width="200" height="200"></td>
+    <td><img src=https://github.com/ProtossDragoon/NeRF-TF2-Keras/blob/master/docs/result.gif alt="" width="200" height="200"></td>
+    <td><img src=https://github.com/ProtossDragoon/NeRF-TF2-Keras/blob/master/docs/result_2.gif alt="" width="200" height="200"></td>
+    <td><img src=https://github.com/ProtossDragoon/NeRF-TF2-Keras/blob/master/docs/result_3.gif alt="" width="200" height="200"></td>
   </tr>
   <tr>
     <td>disparity</td>
-    <td align="center"><img src=https://github.com/ProtossDragoon/NeRF-TF2-Keras/blob/master/docs/result_80_64_1.gif alt="" width="200" height="200"></td>
-    <td align="center"><img src=https://github.com/ProtossDragoon/NeRF-TF2-Keras/blob/master/docs/result_80_64_2.gif alt="" width="200" height="200"></td>
-    <td align="center"><img src=https://github.com/ProtossDragoon/NeRF-TF2-Keras/blob/master/docs/result_80_64_3.gif alt="" width="200" height="200"></td>
+    <td><img src=https://github.com/ProtossDragoon/NeRF-TF2-Keras/blob/master/docs/result_80_64_1.gif alt="" width="200" height="200"></td>
+    <td><img src=https://github.com/ProtossDragoon/NeRF-TF2-Keras/blob/master/docs/result_80_64_2.gif alt="" width="200" height="200"></td>
+    <td><img src=https://github.com/ProtossDragoon/NeRF-TF2-Keras/blob/master/docs/result_80_64_3.gif alt="" width="200" height="200"></td>
   </tr>
   <tr>
     <td>3D figure</td>
-    <td align="center"><img src=https://github.com/ProtossDragoon/NeRF-TF2-Keras/blob/master/docs/result_160_64_32_1b-30.gif alt="" width="200" height="200"></td>
-    <td align="center"><img src=https://github.com/ProtossDragoon/NeRF-TF2-Keras/blob/master/docs/result_160_64_32_1b-10.gif alt="" width="200" height="200"></td>
-    <td align="center"><img src=https://github.com/ProtossDragoon/NeRF-TF2-Keras/blob/master/docs/result_160_64_32_1b_10.gif alt="" width="200" height="200"></td>
+    <td><img src=https://github.com/ProtossDragoon/NeRF-TF2-Keras/blob/master/docs/result_160_64_32_1b-30.gif alt="" width="200" height="200"></td>
+    <td><img src=https://github.com/ProtossDragoon/NeRF-TF2-Keras/blob/master/docs/result_160_64_32_1b-10.gif alt="" width="200" height="200"></td>
+    <td><img src=https://github.com/ProtossDragoon/NeRF-TF2-Keras/blob/master/docs/result_160_64_32_1b_10.gif alt="" width="200" height="200"></td>
   </tr>
 </tbody>
 </table>
@@ -82,30 +82,30 @@
     <th>결과물</th>
   </tr>
 </thead>
-<tbody>
+<tbody align="center">
   <tr>
     <td>RGB video</td>
-    <td align="center"><img src= alt=""></td>
+    <td><img src= alt=""></td>
   </tr>
   <tr>
     <td>image and pose</td>
-    <td align="center"><img src=https://s3.us-west-2.amazonaws.com/secure.notion-static.com/573fa13f-da6a-4111-be17-9cf9e05695ee/wandb_show_pose.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220809%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220809T122452Z&X-Amz-Expires=86400&X-Amz-Signature=9ba9c1d7112eac7bc3a9ddbb6e1e41f844077d9168093ef5e73956721a6cc68f&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22wandb_show_pose.gif%22&x-id=GetObject alt=""></td>
+    <td><img src=https://s3.us-west-2.amazonaws.com/secure.notion-static.com/573fa13f-da6a-4111-be17-9cf9e05695ee/wandb_show_pose.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220809%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220809T122452Z&X-Amz-Expires=86400&X-Amz-Signature=9ba9c1d7112eac7bc3a9ddbb6e1e41f844077d9168093ef5e73956721a6cc68f&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22wandb_show_pose.gif%22&x-id=GetObject alt=""></td>
   </tr>
   <tr>
     <td>implicit 3d representation</td>
-    <td align="center"><img src=https://s3.us-west-2.amazonaws.com/secure.notion-static.com/be8757ad-8f7b-4d82-965d-c564617fa84f/%E1%84%92%E1%85%AA%E1%84%86%E1%85%A7%E1%86%AB_%E1%84%80%E1%85%B5%E1%84%85%E1%85%A9%E1%86%A8_2022-08-07_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_6_58_16_AdobeExpress.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220809%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220809T122558Z&X-Amz-Expires=86400&X-Amz-Signature=7895a683de1348ca8991b5e129b75518f32df021dbbed178a666607a9fce1d7b&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22%25E1%2584%2592%25E1%2585%25AA%25E1%2584%2586%25E1%2585%25A7%25E1%2586%25AB_%25E1%2584%2580%25E1%2585%25B5%25E1%2584%2585%25E1%2585%25A9%25E1%2586%25A8_2022-08-07_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_6_58_16_AdobeExpress.gif%22&x-id=GetObject alt=""></td>
+    <td><img src=https://s3.us-west-2.amazonaws.com/secure.notion-static.com/be8757ad-8f7b-4d82-965d-c564617fa84f/%E1%84%92%E1%85%AA%E1%84%86%E1%85%A7%E1%86%AB_%E1%84%80%E1%85%B5%E1%84%85%E1%85%A9%E1%86%A8_2022-08-07_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_6_58_16_AdobeExpress.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220809%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220809T122558Z&X-Amz-Expires=86400&X-Amz-Signature=7895a683de1348ca8991b5e129b75518f32df021dbbed178a666607a9fce1d7b&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22%25E1%2584%2592%25E1%2585%25AA%25E1%2584%2586%25E1%2585%25A7%25E1%2586%25AB_%25E1%2584%2580%25E1%2585%25B5%25E1%2584%2585%25E1%2585%25A9%25E1%2586%25A8_2022-08-07_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_6_58_16_AdobeExpress.gif%22&x-id=GetObject alt=""></td>
   </tr>
   <tr>
-    <td>3d representation (mesh 3d model)</td>
-    <td align="center"><img src=https://s3.us-west-2.amazonaws.com/secure.notion-static.com/fe53287d-bd97-42ca-b21a-85a2812018c2/%E1%84%92%E1%85%AA%E1%84%86%E1%85%A7%E1%86%AB_%E1%84%80%E1%85%B5%E1%84%85%E1%85%A9%E1%86%A8_2022-08-07_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_6_27_50_AdobeExpress.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220809%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220809T122631Z&X-Amz-Expires=86400&X-Amz-Signature=61bac680552219b22c0dc941935508910b7b74ba4581ac41d3293df75bca6176&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22%25E1%2584%2592%25E1%2585%25AA%25E1%2584%2586%25E1%2585%25A7%25E1%2586%25AB_%25E1%2584%2580%25E1%2585%25B5%25E1%2584%2585%25E1%2585%25A9%25E1%2586%25A8_2022-08-07_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_6_27_50_AdobeExpress.gif%22&x-id=GetObject alt=""></td>
+    <td>3d representation<br>(mesh 3d model)</td>
+    <td><img src=https://s3.us-west-2.amazonaws.com/secure.notion-static.com/fe53287d-bd97-42ca-b21a-85a2812018c2/%E1%84%92%E1%85%AA%E1%84%86%E1%85%A7%E1%86%AB_%E1%84%80%E1%85%B5%E1%84%85%E1%85%A9%E1%86%A8_2022-08-07_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_6_27_50_AdobeExpress.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220809%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220809T122631Z&X-Amz-Expires=86400&X-Amz-Signature=61bac680552219b22c0dc941935508910b7b74ba4581ac41d3293df75bca6176&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22%25E1%2584%2592%25E1%2585%25AA%25E1%2584%2586%25E1%2585%25A7%25E1%2586%25AB_%25E1%2584%2580%25E1%2585%25B5%25E1%2584%2585%25E1%2585%25A9%25E1%2586%25A8_2022-08-07_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_6_27_50_AdobeExpress.gif%22&x-id=GetObject alt=""></td>
   </tr>
   <tr>
     <td>slicer SW</td>
-    <td align="center"><img src=https://s3.us-west-2.amazonaws.com/secure.notion-static.com/94e55b44-2fca-49ea-9263-2015a11b9489/%E1%84%92%E1%85%AA%E1%84%86%E1%85%A7%E1%86%AB_%E1%84%80%E1%85%B5%E1%84%85%E1%85%A9%E1%86%A8_2022-08-09_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_8_57_11_AdobeExpress.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220809%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220809T122645Z&X-Amz-Expires=86400&X-Amz-Signature=5a9758ebb457b854c484b45b98a4feafc5fe413579a016e13b864b431994bcaf&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22%25E1%2584%2592%25E1%2585%25AA%25E1%2584%2586%25E1%2585%25A7%25E1%2586%25AB_%25E1%2584%2580%25E1%2585%25B5%25E1%2584%2585%25E1%2585%25A9%25E1%2586%25A8_2022-08-09_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_8_57_11_AdobeExpress.gif%22&x-id=GetObject alt=""></td>
+    <td><img src=https://s3.us-west-2.amazonaws.com/secure.notion-static.com/94e55b44-2fca-49ea-9263-2015a11b9489/%E1%84%92%E1%85%AA%E1%84%86%E1%85%A7%E1%86%AB_%E1%84%80%E1%85%B5%E1%84%85%E1%85%A9%E1%86%A8_2022-08-09_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_8_57_11_AdobeExpress.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220809%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220809T122645Z&X-Amz-Expires=86400&X-Amz-Signature=5a9758ebb457b854c484b45b98a4feafc5fe413579a016e13b864b431994bcaf&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22%25E1%2584%2592%25E1%2585%25AA%25E1%2584%2586%25E1%2585%25A7%25E1%2586%25AB_%25E1%2584%2580%25E1%2585%25B5%25E1%2584%2585%25E1%2585%25A9%25E1%2586%25A8_2022-08-09_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_8_57_11_AdobeExpress.gif%22&x-id=GetObject alt=""></td>
   </tr>
   <tr>
     <td>figure</td>
-    <td align="center"><img src= alt=""></td>
+    <td><img src= alt=""></td>
   </tr>
 </tbody>
 </table>
@@ -173,16 +173,16 @@ NeRF 의 입력은 (이미지, 카메라포즈) 의 집합이다. 커스텀 이�
     <th>360도 촬영</th>
   </tr>
 </thead>
-<tbody>
+<tbody align="center">
   <tr>
-    <td align="center"><img src=https://github.com/Fyusion/LLFF/raw/master/imgs/capture.gif alt="source LLFF"></td>
-    <td align="center"><img src=https://s3.us-west-2.amazonaws.com/secure.notion-static.com/8591ab68-7922-4885-bfe7-1614ecf8b293/%E1%84%92%E1%85%AA%E1%84%86%E1%85%A7%E1%86%AB_%E1%84%80%E1%85%B5%E1%84%85%E1%85%A9%E1%86%A8_2022-08-07_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_7_06_02_AdobeExpress.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220809%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220809T123659Z&X-Amz-Expires=86400&X-Amz-Signature=e2d73df4e97c5113f04ca9b87c5ba095655e5ebc47863202e2389c8b311731aa&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22%25E1%2584%2592%25E1%2585%25AA%25E1%2584%2586%25E1%2585%25A7%25E1%2586%25AB_%25E1%2584%2580%25E1%2585%25B5%25E1%2584%2585%25E1%2585%25A9%25E1%2586%25A8_2022-08-07_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_7_06_02_AdobeExpress.gif%22&x-id=GetObject alt=""></td>
+    <td><img src=https://github.com/Fyusion/LLFF/raw/master/imgs/capture.gif alt="source LLFF"></td>
+    <td><img src=https://s3.us-west-2.amazonaws.com/secure.notion-static.com/8591ab68-7922-4885-bfe7-1614ecf8b293/%E1%84%92%E1%85%AA%E1%84%86%E1%85%A7%E1%86%AB_%E1%84%80%E1%85%B5%E1%84%85%E1%85%A9%E1%86%A8_2022-08-07_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_7_06_02_AdobeExpress.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220809%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220809T123659Z&X-Amz-Expires=86400&X-Amz-Signature=e2d73df4e97c5113f04ca9b87c5ba095655e5ebc47863202e2389c8b311731aa&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22%25E1%2584%2592%25E1%2585%25AA%25E1%2584%2586%25E1%2585%25A7%25E1%2586%25AB_%25E1%2584%2580%25E1%2585%25B5%25E1%2584%2585%25E1%2585%25A9%25E1%2586%25A8_2022-08-07_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_7_06_02_AdobeExpress.gif%22&x-id=GetObject alt=""></td>
   </tr>
 </tbody>
 </table>
 
 |       옵션       |  파라미터 | 역할 |
-|:---------------:|:----:|:---:|:----:|:---:|
+|:---------------:|:------:|:---:|
 | `--wandbproject`                      | wandb 프로젝트명    | 본 프로젝트에서는 필요한 Metric, 평가지표들을 시각화하기 위하여 실험 관리 도구인 wandb를 사용한다.|
 | `--wandbentity`                       | wandb 팀 또는 유저명 | 본 프로젝트에서는 필요한 Metric, 평가지표들을 시각화하기 위하여 실험 관리 도구인 wandb를 사용한다.|
 | `--no_ndc`, `--spherify`, `--lindisp` |                   | forward facing scene 에서는 필요하지 않지만, 360 scene 에 대해서는 반드시 사용해야 하는 플래그이다.|
