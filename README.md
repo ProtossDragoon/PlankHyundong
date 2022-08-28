@@ -80,35 +80,30 @@
 <table>
 <thead align="center">
   <tr>
-    <th>파이프라인 요소</th>
-    <th>결과물</th>
+    <th>1️⃣</th>
+    <th>2️⃣</th>
+    <th>3️⃣</th>
+    <th>4️⃣</th>
+    <th>5️⃣</th>
+    <th>6️⃣</th>
   </tr>
 </thead>
 <tbody align="center">
-  <tr>
-    <td>RGB video</td>
-    <td><img height="300" src=https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/non_forward_facing.gif alt=""></td>
+    <td><img height="300" src=https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/non_forward_facing.gif></td>
+    <td><img height="300" src=https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/wandb_show_pose.gif></td>
+    <td><img height="300" src=https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/wandb_visualize_implicit_representation.gif></td>
+    <td><img height="300" src=https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/meshed_representation.gif></td>
+    <td><img height="300" src=https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/slicer_sw.gif></td>
+    <td><img height="300" src=https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/result_1.png></td>
   </tr>
-  <tr>
-    <td>image and pose</td>
-    <td><img height="300" src=https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/wandb_show_pose.gif alt=""></td>
-  </tr>
-  <tr>
-    <td>implicit 3d representation</td>
-    <td><img height="300" src=https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/wandb_visualize_implicit_representation.gif alt=""></td>
-  </tr>
-  <tr>
-    <td>3d representation<br>(mesh 3d model)</td>
-    <td><img height="300" src=https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/meshed_representation.gif  alt=""></td>
-  </tr>
-  <tr>
-    <td>slicer SW</td>
-    <td><img height="300" src=https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/slicer_sw.gif alt=""></td>
-  </tr>
-  <tr>
-    <td>figure</td>
-    <td><img height="300" src= alt=https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/result_1.png ></td>
-  </tr>
+</tbody>
+<tbody>
+    <td>RGB 비디오</td>
+    <td>이미지와 포즈</td>
+    <td>뉴럴넷 기반 3d 표현</td>
+    <td>메쉬가 적용된 3d 표현</td>
+    <td>슬라이서 소프트웨어</td>
+    <td>결과물 피규어</td>
 </tbody>
 </table>
 
@@ -126,8 +121,8 @@
 </thead>
 <tbody align="center">
   <tr>
-    <td><img src=https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/non_forward_facing.gif alt=""></td>
-    <td><img src=https://github.com/Fyusion/LLFF/raw/master/imgs/capture.gif alt="source LLFF"></td>
+    <td><img src=https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/non_forward_facing.gif></td>
+    <td><img src=https://github.com/Fyusion/LLFF/raw/master/imgs/capture.gif></td>
   </tr>
   <tr>
     <td>이 프로젝트에서 사용한 방법</td>
@@ -192,7 +187,7 @@
 
 **NOTE:** 반드시 GPU 런타임을 사용해야 합니다.
 
-NeRF 의 입력은 (이미지, 카메라포즈) 의 집합입니다. 커스텀 이미지로부터 이미지 각각에 해당하는 카메라 포즈를 계산하기 위해 [COLMAP](https://github.com/colmap/colmap)을 기반으로 동작하는 [LLFF](https://github.com/Fyusion/LLFF) 저자의 스크립트를 사용합니다. 하지만 LLFF 스크립트를 구동할 수 있는 환경을 구축하는 일은 꽤 까다롭습니다. 그래서 플랭크현동은 위 노트북을 미리 준비해 두었습니다. COLAB 클라우드 컴퓨터에서 모든 연산이 이루어집니다. 실행이 완료되면 데이터셋 폴더 안에 NeRF 모델을 실행시키는 데 필요한 `poses_bounds.npy` 파일이 생성됩니다.
+NeRF 의 입력은 (이미지, 카메라포즈) 의 집합입니다. 커스텀 이미지로부터 이미지 각각에 해당하는 카메라 포즈를 계산하기 위해 [COLMAP](https://github.com/colmap/colmap)을 기반으로 동작하는 [LLFF](https://github.com/Fyusion/LLFF) 저자의 스크립트를 사용합니다. 하지만 LLFF 스크립트를 구동할 수 있는 환경을 구축하는 일은 꽤 까다롭습니다. 이러한 문제를 피하기 위해 [플랭크현동이 제공하는 노트북]()을 사용하세요. COLAB 클라우드 컴퓨터에서 모든 연산이 이루어집니다. 실행이 완료되면 데이터셋 폴더 안에 NeRF 모델을 실행시키는 데 필요한 `poses_bounds.npy` 파일이 생성됩니다.
 
 <a name="step4"></a>
 ## NeRF 모델 학습시키기
@@ -201,6 +196,8 @@ NeRF 의 입력은 (이미지, 카메라포즈) 의 집합입니다. 커스텀 �
 <a href="https://colab.research.google.com/github/ProtossDragoon/PlankHyundong/blob/main/notebooks/nerf_wandb_colab.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a></p>
+
+**NOTE:** 반드시 GPU 런타임을 사용해야 합니다.
 
 ### 학습 옵션
 
@@ -291,16 +288,7 @@ NeRF 모델로 학습시킨 implicit representation 을 시각화 하기 위해,
 <a name="usage"></a>
 # 팀
 
-|       학적       |  이름 | 역할 | 이메일 | 블로그 |
-|:---------------:|:----:|:---:|:----:|:---:|
-| 18, 컴퓨터공      | 이장후 |     |     | |
-| 18, 컴퓨터공      | 조용재 |     |     | |
-| 18, 지능기계      | 장수명 |     |     | |
-| 19, 컴퓨터공      | 이현동 |     |     | |
-| 19, 통계, 컴퓨터공 | 이연경 |     |     | |
-
 - [세종대학교 인공지능 동아리 SAI](https://github.com/sju-coml/SAI)
 - [프로젝트 칸반](https://www.notion.so/janghoo/21fcf2a58bd0412d98750e92156b728b?v=fb1550801bd94e748c1f13bc2c12c51b)
-
 
 ![logo-color.png](https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/logo_background.png )
