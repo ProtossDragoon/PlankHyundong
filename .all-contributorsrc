@@ -1,0 +1,24 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "yyongjae",
+      "name": "YongJae Cho",
+      "avatar_url": "https://avatars.githubusercontent.com/u/55885072?v=4",
+      "profile": "http://dydwo706@gmail.com",
+      "contributions": [
+        "maintenance"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "PlankHyundong",
+  "projectOwner": "ProtossDragoon",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
