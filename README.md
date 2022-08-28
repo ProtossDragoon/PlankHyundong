@@ -57,7 +57,7 @@
     - [비디오로부터 이미지 샘플링하기](#step2)
     - [이미지에 대한 카메라 포즈 구하기](#step3)
     - [NeRF 모델 학습시키기](#step4)
-    - [NeRF 모델로부터 Mesh 만들기](#step5)
+    - [NeRF 모델로부터 Mesh 만들고 다듬기](#step5)
     - [피규어 인쇄하기](#step6)
     - [인쇄된 피규어 후가공하기](#step7)
 - [실험 및 평가](#experiment)
@@ -69,6 +69,8 @@
 
 <a name="quickstart"></a>
 # 빠른 시작
+
+`TODO`
 
 <a name="start"></a>
 # 구성요소별로 시작하기
@@ -89,23 +91,23 @@
   </tr>
   <tr>
     <td>image and pose</td>
-    <td><img src=https://s3.us-west-2.amazonaws.com/secure.notion-static.com/573fa13f-da6a-4111-be17-9cf9e05695ee/wandb_show_pose.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220809%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220809T122452Z&X-Amz-Expires=86400&X-Amz-Signature=9ba9c1d7112eac7bc3a9ddbb6e1e41f844077d9168093ef5e73956721a6cc68f&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22wandb_show_pose.gif%22&x-id=GetObject alt=""></td>
+    <td><img height="300" src=https://s3.us-west-2.amazonaws.com/secure.notion-static.com/573fa13f-da6a-4111-be17-9cf9e05695ee/wandb_show_pose.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220809%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220809T122452Z&X-Amz-Expires=86400&X-Amz-Signature=9ba9c1d7112eac7bc3a9ddbb6e1e41f844077d9168093ef5e73956721a6cc68f&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22wandb_show_pose.gif%22&x-id=GetObject alt=""></td>
   </tr>
   <tr>
     <td>implicit 3d representation</td>
-    <td><img src=https://s3.us-west-2.amazonaws.com/secure.notion-static.com/be8757ad-8f7b-4d82-965d-c564617fa84f/%E1%84%92%E1%85%AA%E1%84%86%E1%85%A7%E1%86%AB_%E1%84%80%E1%85%B5%E1%84%85%E1%85%A9%E1%86%A8_2022-08-07_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_6_58_16_AdobeExpress.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220809%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220809T122558Z&X-Amz-Expires=86400&X-Amz-Signature=7895a683de1348ca8991b5e129b75518f32df021dbbed178a666607a9fce1d7b&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22%25E1%2584%2592%25E1%2585%25AA%25E1%2584%2586%25E1%2585%25A7%25E1%2586%25AB_%25E1%2584%2580%25E1%2585%25B5%25E1%2584%2585%25E1%2585%25A9%25E1%2586%25A8_2022-08-07_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_6_58_16_AdobeExpress.gif%22&x-id=GetObject alt=""></td>
+    <td><img height="300" src=https://s3.us-west-2.amazonaws.com/secure.notion-static.com/be8757ad-8f7b-4d82-965d-c564617fa84f/%E1%84%92%E1%85%AA%E1%84%86%E1%85%A7%E1%86%AB_%E1%84%80%E1%85%B5%E1%84%85%E1%85%A9%E1%86%A8_2022-08-07_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_6_58_16_AdobeExpress.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220818%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220818T114728Z&X-Amz-Expires=86400&X-Amz-Signature=9b044ea7257d3883e32125ec088ccf415e42f93802728be720f63cb0d2d9bfe8&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22%25E1%2584%2592%25E1%2585%25AA%25E1%2584%2586%25E1%2585%25A7%25E1%2586%25AB_%25E1%2584%2580%25E1%2585%25B5%25E1%2584%2585%25E1%2585%25A9%25E1%2586%25A8_2022-08-07_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_6_58_16_AdobeExpress.gif%22&x-id=GetObject alt=""></td>
   </tr>
   <tr>
     <td>3d representation<br>(mesh 3d model)</td>
-    <td><img src=https://s3.us-west-2.amazonaws.com/secure.notion-static.com/fe53287d-bd97-42ca-b21a-85a2812018c2/%E1%84%92%E1%85%AA%E1%84%86%E1%85%A7%E1%86%AB_%E1%84%80%E1%85%B5%E1%84%85%E1%85%A9%E1%86%A8_2022-08-07_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_6_27_50_AdobeExpress.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220809%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220809T122631Z&X-Amz-Expires=86400&X-Amz-Signature=61bac680552219b22c0dc941935508910b7b74ba4581ac41d3293df75bca6176&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22%25E1%2584%2592%25E1%2585%25AA%25E1%2584%2586%25E1%2585%25A7%25E1%2586%25AB_%25E1%2584%2580%25E1%2585%25B5%25E1%2584%2585%25E1%2585%25A9%25E1%2586%25A8_2022-08-07_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_6_27_50_AdobeExpress.gif%22&x-id=GetObject alt=""></td>
+    <td><img height="300" src=https://s3.us-west-2.amazonaws.com/secure.notion-static.com/fe53287d-bd97-42ca-b21a-85a2812018c2/%E1%84%92%E1%85%AA%E1%84%86%E1%85%A7%E1%86%AB_%E1%84%80%E1%85%B5%E1%84%85%E1%85%A9%E1%86%A8_2022-08-07_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_6_27_50_AdobeExpress.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220818%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220818T114715Z&X-Amz-Expires=86400&X-Amz-Signature=c955a1541034ea32fc236492db07116d4922393d97fd082c1c6dd2b5ee0f3ebc&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22%25E1%2584%2592%25E1%2585%25AA%25E1%2584%2586%25E1%2585%25A7%25E1%2586%25AB_%25E1%2584%2580%25E1%2585%25B5%25E1%2584%2585%25E1%2585%25A9%25E1%2586%25A8_2022-08-07_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_6_27_50_AdobeExpress.gif%22&x-id=GetObject alt=""></td>
   </tr>
   <tr>
     <td>slicer SW</td>
-    <td><img src=https://s3.us-west-2.amazonaws.com/secure.notion-static.com/94e55b44-2fca-49ea-9263-2015a11b9489/%E1%84%92%E1%85%AA%E1%84%86%E1%85%A7%E1%86%AB_%E1%84%80%E1%85%B5%E1%84%85%E1%85%A9%E1%86%A8_2022-08-09_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_8_57_11_AdobeExpress.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220809%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220809T122645Z&X-Amz-Expires=86400&X-Amz-Signature=5a9758ebb457b854c484b45b98a4feafc5fe413579a016e13b864b431994bcaf&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22%25E1%2584%2592%25E1%2585%25AA%25E1%2584%2586%25E1%2585%25A7%25E1%2586%25AB_%25E1%2584%2580%25E1%2585%25B5%25E1%2584%2585%25E1%2585%25A9%25E1%2586%25A8_2022-08-09_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_8_57_11_AdobeExpress.gif%22&x-id=GetObject alt=""></td>
+    <td><img height="300" src=https://s3.us-west-2.amazonaws.com/secure.notion-static.com/94e55b44-2fca-49ea-9263-2015a11b9489/%E1%84%92%E1%85%AA%E1%84%86%E1%85%A7%E1%86%AB_%E1%84%80%E1%85%B5%E1%84%85%E1%85%A9%E1%86%A8_2022-08-09_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_8_57_11_AdobeExpress.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220818%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220818T114643Z&X-Amz-Expires=86400&X-Amz-Signature=a103abd89748bb6804f82159770844d56e4258f8fc311e96a79edef98926fdc7&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22%25E1%2584%2592%25E1%2585%25AA%25E1%2584%2586%25E1%2585%25A7%25E1%2586%25AB_%25E1%2584%2580%25E1%2585%25B5%25E1%2584%2585%25E1%2585%25A9%25E1%2586%25A8_2022-08-09_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_8_57_11_AdobeExpress.gif%22&x-id=GetObject alt=""></td>
   </tr>
   <tr>
     <td>figure</td>
-    <td><img src= alt=""></td>
+    <td><img height="300" src= alt=""></td>
   </tr>
 </tbody>
 </table>
@@ -114,6 +116,25 @@
 ## 피사체 동영상 촬영하기
 
 ### 촬영 권장사항
+
+<table>
+<thead align="center">
+  <tr>
+    <th>권장, 360도 촬영</th>
+    <th>정면촬영 (Forward Facing)</th>
+  </tr>
+</thead>
+<tbody align="center">
+  <tr>
+    <td><img src=https://s3.us-west-2.amazonaws.com/secure.notion-static.com/1e8fe647-2ccc-4671-ad22-afc7e5b1c4b2/non_forward_facing.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220818%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220818T122055Z&X-Amz-Expires=86400&X-Amz-Signature=8518eff2bee0f4d12e4a72cce55965814291f020618d8a6b577c2b20412f73a9&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22non_forward_facing.gif%22&x-id=GetObject alt=""></td>
+    <td><img src=https://github.com/Fyusion/LLFF/raw/master/imgs/capture.gif alt="source LLFF"></td>
+  </tr>
+  <tr>
+    <td>이 프로젝트에서 사용한 방법</td>
+    <td>모델 학습은 가능하지만 피규어를 제작할 수 없음. 동영상 출처: <a href="https://github.com/Fyusion/LLFF">Google LLFF</a></td>
+  </tr>
+</tbody>
+</table>
 
 - ✅ 충분한 조명을 확보하여 충분히 짧은 셔터 속도를 사용할 수 있도록 준비
 - ✅ 피사체를 가운데에 두고 촬영자는 360도로 돌면서 촬영
@@ -139,12 +160,17 @@
 </table>
 
 - ❗ 피사체 주변에는 번들거리는 물체가 없도록 주의 
-    - 피사체 주변에 차가 많을 때 결과가 좋지 않음을 확인함
+    - 실험을 통해 피사체 주변에 차가 많을 때 결과가 좋지 않음을 확인했습니다.
 - ❗ 피사체를 제외한 주변의 움직이는 사물이나 그림자 등이 등장하지 않도록 주의 
-    - 촬영자의 팔이 나온 데이터를 제거했을 때 성능이 매우 향상됨을 확인함
+    - 실험을 통해 촬영자의 팔이 나온 데이터를 제거했을 때 성능이 매우 향상됨을 확인했습니다.
 
 <a name="step2"></a>
 ## 비디오로부터 이미지 샘플링하기
+
+<p style="text-align:center;">
+<a href="https://colab.research.google.com/github/ProtossDragoon/PlankHyundong/blob/main/notebooks/sampling_colab.ipynb">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+</a></p>
 
 촬영한 비디오를 이미지로 등간격 샘플링한다. 플랭크현동 프로젝트에서는 피사체를 두고 360도를 60초만에 회전하며 촬영했다. 이때 100장을 샘플링했다.
 
@@ -155,44 +181,70 @@
 <a name="step3"></a>
 ## 이미지에 대한 카메라 포즈 구하기
 
-NeRF 의 입력은 (이미지, 카메라포즈) 의 집합이다. 커스텀 이미지로부터 이미지 각각에 해당하는 카메라 포즈를 계산하기 위해서는 [COLMAP](https://github.com/colmap/colmap)을 기반으로 동작하는 [LLFF](https://github.com/Fyusion/LLFF) 저자의 스크립트를 사용해야 한다.
+<p style="text-align:center;">
+<a href="https://colab.research.google.com/github/ProtossDragoon/PlankHyundong/blob/main/notebooks/colmap_colab.ipynb">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+</a></p>
+
+**NOTE:** 반드시 GPU 런타임을 사용해야 합니다.
+
+NeRF 의 입력은 (이미지, 카메라포즈) 의 집합입니다. 커스텀 이미지로부터 이미지 각각에 해당하는 카메라 포즈를 계산하기 위해서는 [COLMAP](https://github.com/colmap/colmap)을 기반으로 동작하는 [LLFF](https://github.com/Fyusion/LLFF) 저자의 스크립트를 사용해야 합니다.
 
 `TODO`
+
+non_forward_facing
 
 <a name="step4"></a>
 ## NeRF 모델 학습시키기
 
-`TODO` run in colab
+<p style="text-align:center;">
+<a href="https://colab.research.google.com/github/ProtossDragoon/PlankHyundong/blob/main/notebooks/nerf_wandb_colab.ipynb">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+</a></p>
 
 ### 학습 옵션
+
+|       옵션       |  파라미터 | 역할 |
+|:---------------:|:------:|:---:|
+| `--wandbproject`                      | wandb 프로젝트명      | 본 프로젝트에서는 필요한 Metric, 평가지표들을 시각화하기 위하여 실험 관리 도구인 wandb를 사용합니다.|
+| `--wandbentity`                       | wandb 팀명 또는 유저명 | 본 프로젝트에서는 필요한 Metric, 평가지표들을 시각화하기 위하여 실험 관리 도구인 wandb를 사용합니다.|
+| `--no_ndc`, `--spherify`, `--lindisp` |                    | forward facing scene 에서는 필요하지 않지만, 360 scene 에 대해서는 반드시 사용해야 하는 플래그입니다.|
+
+<a name="step5"></a>
+## NeRF 모델로부터 Mesh 만들고 다듬기
+
+<p style="text-align:center;">
+<a href="https://colab.research.google.com/github/ProtossDragoon/PlankHyundong/blob/main/notebooks/extract_mesh_colab.ipynb">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+</a></p>
+
+**NOTE:** 반드시 GPU 런타임을 사용해야 합니다.
+
+NeRF 모델로 학습시킨 implicit representation 을 시각화 하기 위해, 모델 학습 과정에서의 가중치를 이용해 turntable.mp4 영상과 Mesh(.obj)를 생성해내는 과정이다. 학습시킨 모델을 로드한 뒤, PyMCubes 패키지를 통해 표면(iso-surface)을 추출하고, 그 결과물을 저장한다.
 
 <table>
 <thead align="center">
   <tr>
-    <th>정면 촬영 (Forward Facing)</th>
-    <th>360도 촬영</th>
+    <th></th>
+    <th>문제</th>
+    <th>해결</th>
   </tr>
 </thead>
 <tbody align="center">
   <tr>
-    <td><img src=https://github.com/Fyusion/LLFF/raw/master/imgs/capture.gif alt="source LLFF"></td>
-    <td><img src=https://s3.us-west-2.amazonaws.com/secure.notion-static.com/8591ab68-7922-4885-bfe7-1614ecf8b293/%E1%84%92%E1%85%AA%E1%84%86%E1%85%A7%E1%86%AB_%E1%84%80%E1%85%B5%E1%84%85%E1%85%A9%E1%86%A8_2022-08-07_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_7_06_02_AdobeExpress.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220809%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220809T123659Z&X-Amz-Expires=86400&X-Amz-Signature=e2d73df4e97c5113f04ca9b87c5ba095655e5ebc47863202e2389c8b311731aa&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22%25E1%2584%2592%25E1%2585%25AA%25E1%2584%2586%25E1%2585%25A7%25E1%2586%25AB_%25E1%2584%2580%25E1%2585%25B5%25E1%2584%2585%25E1%2585%25A9%25E1%2586%25A8_2022-08-07_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_7_06_02_AdobeExpress.gif%22&x-id=GetObject alt=""></td>
+    <td>제거</td>
+    <td><img src="" alt=""></td>
+    <td><img src="" alt=""></td>
+  </tr>
+  <tr>
+    <td>생성</td>
+    <td><img src="" alt=""></td>
+    <td><img src="" alt=""></td>
   </tr>
 </tbody>
 </table>
 
-|       옵션       |  파라미터 | 역할 |
-|:---------------:|:------:|:---:|
-| `--wandbproject`                      | wandb 프로젝트명    | 본 프로젝트에서는 필요한 Metric, 평가지표들을 시각화하기 위하여 실험 관리 도구인 wandb를 사용한다.|
-| `--wandbentity`                       | wandb 팀 또는 유저명 | 본 프로젝트에서는 필요한 Metric, 평가지표들을 시각화하기 위하여 실험 관리 도구인 wandb를 사용한다.|
-| `--no_ndc`, `--spherify`, `--lindisp` |                   | forward facing scene 에서는 필요하지 않지만, 360 scene 에 대해서는 반드시 사용해야 하는 플래그이다.|
-
-<a name="step5"></a>
-## NeRF 모델로부터 Mesh 만들기
-
-`TODO` run in colab
-
-NeRF 모델로 학습시킨 implicit representation 을 시각화 하기 위해, 모델 학습 과정에서의 가중치를 이용해 turntable.mp4 영상과 Mesh(.obj)를 생성해내는 과정이다. 학습시킨 모델을 로드한 뒤, PyMCubes 패키지를 통해 표면(iso-surface)을 추출하고, 그 결과물을 저장한다.
+이때 그 결과물의 상태가 좋지 않을 가능성이 높다. 
 
 <a name="step6"></a>
 ## 피규어 인쇄하기
@@ -229,13 +281,12 @@ NeRF 모델로 학습시킨 implicit representation 을 시각화 하기 위해,
 <a name="devenv"></a>
 # 개발 환경
 
-- **Weight and Bias (wandb)**
-    - 실험 관리 도구 [wandb](https://wandb.ai/) 계정을 준비한다.
+- **Weight and Bias ([wandb](https://wandb.ai/))**
 - **Tensorflow 1.15**
-    - [NeRF 공식 저장소](https://github.com/bmild/nerf)와 [NeRF 공식 저장소를 수정하여 wandb 가 자동으로 연결되도록 수정한 저장소](https://github.com/ProtossDragoon/nerf-wandb)는 TensorFlow 1.15 를 사용한다.
+    - [NeRF 공식 저장소](https://github.com/bmild/nerf)와 [NeRF 공식 저장소를 수정하여 wandb 가 자동으로 연결되도록 수정한 저장소](https://github.com/ProtossDragoon/nerf-wandb)는 TensorFlow 1.15 를 사용합니다.
 - **Google COLAB**
-    - 플랭크현동팀의 모든 실험은 Google COLAB Pro, Google COLAB Pro+ 에서 진행되었다.
-- Google COLAB 에서 환경에 대한 걱정 없이 실행할 수 있도록 이미 **의존성이 모두 스크립트로 정의**된 [플랭크현동팀의 노트북들](https://github.com/ProtossDragoon/PlankHyundong/tree/main/notebooks)을 실행하기를 권장한다.
+    - 플랭크현동팀의 모든 실험은 Google COLAB Pro, Google COLAB Pro+ 에서 진행되었습니다.
+    - 환경에 대한 걱정 없이 실행할 수 있도록 이미 **의존성이 모두 스크립트로 정의**되어 있는 [플랭크현동팀의 노트북들](https://github.com/ProtossDragoon/PlankHyundong/tree/main/notebooks)이 준비되어 있습니다.
 
 <a name="usage"></a>
 # 팀
@@ -250,3 +301,6 @@ NeRF 모델로 학습시킨 implicit representation 을 시각화 하기 위해,
 
 - [세종대학교 인공지능 동아리 SAI](https://github.com/sju-coml/SAI)
 - [프로젝트 칸반](https://www.notion.so/janghoo/21fcf2a58bd0412d98750e92156b728b?v=fb1550801bd94e748c1f13bc2c12c51b)
+
+
+![logo-color.png](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/735c8ec9-581e-45e1-803c-4863b654037c/logo-color.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220818%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220818T142107Z&X-Amz-Expires=86400&X-Amz-Signature=1b67244e67fc00ee4a879c9df05743d8024d4556e25189b920d023fbf389e842&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22logo-color.png%22&x-id=GetObject)
