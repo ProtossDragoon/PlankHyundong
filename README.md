@@ -1,6 +1,6 @@
 # 플랭크 현동
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=round-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 헬창이 되고 싶은 현동이의 플랭크 자세를 과연 3D로 만들어 박제시킬 수 있을까? 현동이가 플랭크를 흔들림 없이 버텨줄수록 프로젝트 난이도는 낮아지고, 현동이의 플랭크가 흔들흔들 불안정할수록 프로젝트 난이도가 매우 높아지는 "tradeoff" 상황에 놓이게 되는데...
@@ -45,7 +45,7 @@ conda config --set env_prompt '(PlankHyundong)'
 
 - [x] 21' MacBook Pro 16inch (Apple silicon), 32GB
 
-## Contributors ✨
+## 팀 및 기여자
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
