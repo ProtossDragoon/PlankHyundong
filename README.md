@@ -1,4 +1,4 @@
-![logo](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/0824bc5e-5361-4b1d-a1ea-4c223c52c136/logo-no-background.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220809%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220809T133739Z&X-Amz-Expires=86400&X-Amz-Signature=e7b104cd2f7696708f0f06cc5519d63530543733a790a76679b669fdc9e63aa7&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22logo-no-background.svg%22&x-id=GetObject)
+![logo](https://raw.githubusercontent.com/ProtossDragoon/PlankHyundong/944c38802cfe392ed6ed194ccca6a083563add45/docs/images/logo.svg)
 
 <br>
 
@@ -75,7 +75,7 @@
 <a name="start"></a>
 # 구성요소별로 시작하기
 
-![파이프라인](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/d6e5cc9e-5421-4d50-9973-5d521fa497cd/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220809%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220809T121940Z&X-Amz-Expires=86400&X-Amz-Signature=dadc5bc8c5ae90768286a67b86b9e44a15183b5fffc0d56fff4e52a9a30447c7&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
+![파이프라인](https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/pipeline.png )
 
 <table>
 <thead align="center">
@@ -91,7 +91,7 @@
   </tr>
   <tr>
     <td>image and pose</td>
-    <td><img height="300" src=https://s3.us-west-2.amazonaws.com/secure.notion-static.com/573fa13f-da6a-4111-be17-9cf9e05695ee/wandb_show_pose.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220809%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220809T122452Z&X-Amz-Expires=86400&X-Amz-Signature=9ba9c1d7112eac7bc3a9ddbb6e1e41f844077d9168093ef5e73956721a6cc68f&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22wandb_show_pose.gif%22&x-id=GetObject alt=""></td>
+    <td><img height="300" src=https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/wandb_show_pose.gif alt=""></td>
   </tr>
   <tr>
     <td>implicit 3d representation</td>
@@ -99,15 +99,15 @@
   </tr>
   <tr>
     <td>3d representation<br>(mesh 3d model)</td>
-    <td><img height="300" src=https://s3.us-west-2.amazonaws.com/secure.notion-static.com/fe53287d-bd97-42ca-b21a-85a2812018c2/%E1%84%92%E1%85%AA%E1%84%86%E1%85%A7%E1%86%AB_%E1%84%80%E1%85%B5%E1%84%85%E1%85%A9%E1%86%A8_2022-08-07_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_6_27_50_AdobeExpress.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220818%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220818T114715Z&X-Amz-Expires=86400&X-Amz-Signature=c955a1541034ea32fc236492db07116d4922393d97fd082c1c6dd2b5ee0f3ebc&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22%25E1%2584%2592%25E1%2585%25AA%25E1%2584%2586%25E1%2585%25A7%25E1%2586%25AB_%25E1%2584%2580%25E1%2585%25B5%25E1%2584%2585%25E1%2585%25A9%25E1%2586%25A8_2022-08-07_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_6_27_50_AdobeExpress.gif%22&x-id=GetObject alt=""></td>
+    <td><img height="300" src=https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/meshed_representation.gif  alt=""></td>
   </tr>
   <tr>
     <td>slicer SW</td>
-    <td><img height="300" src=https://s3.us-west-2.amazonaws.com/secure.notion-static.com/94e55b44-2fca-49ea-9263-2015a11b9489/%E1%84%92%E1%85%AA%E1%84%86%E1%85%A7%E1%86%AB_%E1%84%80%E1%85%B5%E1%84%85%E1%85%A9%E1%86%A8_2022-08-09_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_8_57_11_AdobeExpress.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220818%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220818T114643Z&X-Amz-Expires=86400&X-Amz-Signature=a103abd89748bb6804f82159770844d56e4258f8fc311e96a79edef98926fdc7&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22%25E1%2584%2592%25E1%2585%25AA%25E1%2584%2586%25E1%2585%25A7%25E1%2586%25AB_%25E1%2584%2580%25E1%2585%25B5%25E1%2584%2585%25E1%2585%25A9%25E1%2586%25A8_2022-08-09_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_8_57_11_AdobeExpress.gif%22&x-id=GetObject alt=""></td>
+    <td><img height="300" src=https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/slicer_sw.gif alt=""></td>
   </tr>
   <tr>
     <td>figure</td>
-    <td><img height="300" src= alt=""></td>
+    <td><img height="300" src= alt=https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/result_1.png ></td>
   </tr>
 </tbody>
 </table>
@@ -126,7 +126,7 @@
 </thead>
 <tbody align="center">
   <tr>
-    <td><img src=https://s3.us-west-2.amazonaws.com/secure.notion-static.com/1e8fe647-2ccc-4671-ad22-afc7e5b1c4b2/non_forward_facing.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220818%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220818T122055Z&X-Amz-Expires=86400&X-Amz-Signature=8518eff2bee0f4d12e4a72cce55965814291f020618d8a6b577c2b20412f73a9&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22non_forward_facing.gif%22&x-id=GetObject alt=""></td>
+    <td><img src=https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/non_forward_facing.gif alt=""></td>
     <td><img src=https://github.com/Fyusion/LLFF/raw/master/imgs/capture.gif alt="source LLFF"></td>
   </tr>
   <tr>
@@ -153,8 +153,8 @@
 </thead>
 <tbody>
   <tr>
-    <td align="center"><img src= alt=""></td>
-    <td align="center"><img src=https://s3.us-west-2.amazonaws.com/secure.notion-static.com/8591ab68-7922-4885-bfe7-1614ecf8b293/%E1%84%92%E1%85%AA%E1%84%86%E1%85%A7%E1%86%AB_%E1%84%80%E1%85%B5%E1%84%85%E1%85%A9%E1%86%A8_2022-08-07_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_7_06_02_AdobeExpress.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220809%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220809T123659Z&X-Amz-Expires=86400&X-Amz-Signature=e2d73df4e97c5113f04ca9b87c5ba095655e5ebc47863202e2389c8b311731aa&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22%25E1%2584%2592%25E1%2585%25AA%25E1%2584%2586%25E1%2585%25A7%25E1%2586%25AB_%25E1%2584%2580%25E1%2585%25B5%25E1%2584%2585%25E1%2585%25A9%25E1%2586%25A8_2022-08-07_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_7_06_02_AdobeExpress.gif%22&x-id=GetObject alt=""></td>
+    <td align="center"><img src=https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/worse_practice_1.jpeg alt=""></td>
+    <td align="center"><img src=https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/worse_practice_2.png alt=""></td>
   </tr>
 </tbody>
 </table>
@@ -262,7 +262,7 @@ NeRF 모델로 학습시킨 implicit representation 을 시각화 하기 위해,
 <a name="dataandnerf"></a>
 ## 데이터셋 및 NeRF 모델 파라미터 실험
 
-![wandb_experiment](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/3dc00483-d4c8-447c-8459-e6f1a5bcf9db/wandb_experiment.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220809%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220809T131040Z&X-Amz-Expires=86400&X-Amz-Signature=7fb358ef904c49fa1e3bdc49d49a2b5b764a045706253daa909f76ac047a00e3&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22wandb_experiment.gif%22&x-id=GetObject)
+![wandb_experiment](https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/wandb_experiment.gif )
 
 - 다양한 시행착오들과 인사이트는 [wandb 리포트](https://wandb.ai/plank-hyundong/plank-hyundong/reports/Hyperparameter-Experiment-Ablation-Study--VmlldzoyNDAzMDYz)에서 모두 확인할 수 있다.
 
@@ -303,4 +303,4 @@ NeRF 모델로 학습시킨 implicit representation 을 시각화 하기 위해,
 - [프로젝트 칸반](https://www.notion.so/janghoo/21fcf2a58bd0412d98750e92156b728b?v=fb1550801bd94e748c1f13bc2c12c51b)
 
 
-![logo-color.png](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/735c8ec9-581e-45e1-803c-4863b654037c/logo-color.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220818%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220818T142107Z&X-Amz-Expires=86400&X-Amz-Signature=1b67244e67fc00ee4a879c9df05743d8024d4556e25189b920d023fbf389e842&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22logo-color.png%22&x-id=GetObject)
+![logo-color.png](https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/logo_background.png )
