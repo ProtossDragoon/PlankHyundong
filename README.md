@@ -104,13 +104,13 @@
 
 <table style="table-layout: fixed; width: 100%;">
 <thead align="center">
-</thead>
   </tr>
     <th>step</th>
     <th>4️⃣</th>
     <th>5️⃣</th>
     <th>6️⃣</th>
   </tr>
+</thead>
 <tbody align="center">
   <tr>
     <td>output</td>
