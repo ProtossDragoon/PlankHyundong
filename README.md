@@ -45,9 +45,7 @@ conda config --set env_prompt '(PlankHyundong)'
 
 - [x] 21' MacBook Pro 16inch (Apple silicon), 32GB
 
-## 팀 및 기여자
-
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+## 팀과 기여자
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
@@ -63,4 +61,4 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+이 프로젝트는 [all-contributors 스펙](https://github.com/all-contributors/all-contributors)을 준수합니다. 어떤 기여이든 상관없이 환영합니다!
