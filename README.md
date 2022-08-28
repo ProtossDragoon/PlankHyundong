@@ -87,7 +87,7 @@
 <tbody align="center">
   <tr>
     <td>RGB video</td>
-    <td><img src= alt=""></td>
+    <td><img height="300" src=https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/non_forward_facing.gif alt=""></td>
   </tr>
   <tr>
     <td>image and pose</td>
@@ -95,7 +95,7 @@
   </tr>
   <tr>
     <td>implicit 3d representation</td>
-    <td><img height="300" src=https://s3.us-west-2.amazonaws.com/secure.notion-static.com/be8757ad-8f7b-4d82-965d-c564617fa84f/%E1%84%92%E1%85%AA%E1%84%86%E1%85%A7%E1%86%AB_%E1%84%80%E1%85%B5%E1%84%85%E1%85%A9%E1%86%A8_2022-08-07_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_6_58_16_AdobeExpress.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220818%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220818T114728Z&X-Amz-Expires=86400&X-Amz-Signature=9b044ea7257d3883e32125ec088ccf415e42f93802728be720f63cb0d2d9bfe8&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22%25E1%2584%2592%25E1%2585%25AA%25E1%2584%2586%25E1%2585%25A7%25E1%2586%25AB_%25E1%2584%2580%25E1%2585%25B5%25E1%2584%2585%25E1%2585%25A9%25E1%2586%25A8_2022-08-07_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_6_58_16_AdobeExpress.gif%22&x-id=GetObject alt=""></td>
+    <td><img height="300" src=https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/wandb_visualize_implicit_representation.gif alt=""></td>
   </tr>
   <tr>
     <td>3d representation<br>(mesh 3d model)</td>
@@ -172,11 +172,15 @@
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a></p>
 
-촬영한 비디오를 이미지로 등간격 샘플링한다. 플랭크현동 프로젝트에서는 피사체를 두고 360도를 60초만에 회전하며 촬영했다. 이때 100장을 샘플링했다.
+|   파라미터    |  설명  |
+|:-----------:|:--------------:|
+| `dir_path`  | 비디오 파일의 경로 |
+| `frame`     | 비디오로부터 샘플링되는 이미지의 개수 |
 
-**NOTE:** 카메라 트래젝토리가 길다면 더 잘게 잘라 주는 것이 좋다.
+스크립트를 이용하여 촬영한 비디오를 이미지로 등간격 샘플링합니다.
 
-`TODO`
+- ✅ 카메라 트래젝토리가 길다면 더 잘게 잘라 주는 것이 좋습니다.
+- ❗ 카메라 트래젝토리가 짧고 렌즈를 열어두는 시간이 짧은 경우, 동영상으로부터 이미지를 너무 잘게 샘플링한다면 성능에 악영향을 미칠 수 있습니다.
 
 <a name="step3"></a>
 ## 이미지에 대한 카메라 포즈 구하기
@@ -188,11 +192,7 @@
 
 **NOTE:** 반드시 GPU 런타임을 사용해야 합니다.
 
-NeRF 의 입력은 (이미지, 카메라포즈) 의 집합입니다. 커스텀 이미지로부터 이미지 각각에 해당하는 카메라 포즈를 계산하기 위해서는 [COLMAP](https://github.com/colmap/colmap)을 기반으로 동작하는 [LLFF](https://github.com/Fyusion/LLFF) 저자의 스크립트를 사용해야 합니다.
-
-`TODO`
-
-non_forward_facing
+NeRF 의 입력은 (이미지, 카메라포즈) 의 집합입니다. 커스텀 이미지로부터 이미지 각각에 해당하는 카메라 포즈를 계산하기 위해 [COLMAP](https://github.com/colmap/colmap)을 기반으로 동작하는 [LLFF](https://github.com/Fyusion/LLFF) 저자의 스크립트를 사용합니다. 하지만 LLFF 스크립트를 구동할 수 있는 환경을 구축하는 일은 꽤 까다롭습니다. 그래서 플랭크현동은 위 노트북을 미리 준비해 두었습니다. COLAB 클라우드 컴퓨터에서 모든 연산이 이루어집니다. 실행이 완료되면 데이터셋 폴더 안에 NeRF 모델을 실행시키는 데 필요한 `poses_bounds.npy` 파일이 생성됩니다.
 
 <a name="step4"></a>
 ## NeRF 모델 학습시키기
