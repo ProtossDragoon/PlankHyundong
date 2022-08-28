@@ -83,28 +83,42 @@
     <th>1️⃣</th>
     <th>2️⃣</th>
     <th>3️⃣</th>
+  </tr>
+</thead>
+<tbody align="center">
+  </tr>
+    <td><img width="300" src=https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/non_forward_facing.gif></td>
+    <td><img width="300" src=https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/wandb_show_pose.gif></td>
+    <td><img width="300" src=https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/wandb_visualize_implicit_representation.gif></td>
+  </tr>
+  <tr>
+    <td>RGB 비디오</td>
+    <td>이미지와 포즈</td>
+    <td>뉴럴넷 기반 3d 표현</td>
+  </tr>
+</tbody>
+</table>
+
+<table>
+<thead align="center">
+</thead>
+  </tr>
     <th>4️⃣</th>
     <th>5️⃣</th>
     <th>6️⃣</th>
   </tr>
-</thead>
-<tbody align="center">
-    <td><img src=https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/non_forward_facing.gif></td>
-    <td><img src=https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/wandb_show_pose.gif></td>
-    <td><img src=https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/wandb_visualize_implicit_representation.gif></td>
-    <td><img src=https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/meshed_representation.gif></td>
-    <td><img src=https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/slicer_sw.gif></td>
-    <td><img src=https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/result_1.png></td>
-  </tr>
-</tbody>
 <tbody>
-    <td>RGB 비디오</td>
-    <td>이미지와 포즈</td>
-    <td>뉴럴넷 기반 3d 표현</td>
+</tbody>
+  <tr>
+    <td><img width="300" src=https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/meshed_representation.gif></td>
+    <td><img width="300" src=https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/slicer_sw.gif></td>
+    <td><img width="300" src=https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/result_1.png></td>
+  </tr>
+  <tr>
     <td>메쉬가 적용된 3d 표현</td>
     <td>슬라이서 소프트웨어</td>
     <td>결과물 피규어</td>
-</tbody>
+  </tr>
 </table>
 
 <a name="step1"></a>
