@@ -64,7 +64,7 @@
     - [데이터셋 및 NeRF 모델 파라미터 실험](#dataandnerf)
     - [Mesh Renderer 파라미터 실험](#renderer)
     - [3D 프린터 옵션 실험](#printer)
-- [개발 환경](#devenv)
+- [환경](#env)
 - [팀](#team)
 
 <a name="quickstart"></a>
@@ -295,15 +295,33 @@ NeRF 모델로 학습시킨 implicit representation 을 시각화 하기 위해,
 - 각각에 따라 결과물의 디테일이 달라진다.
 - 목록을 리스트업하여 메이커에게 전달했다.
 
-<a name="devenv"></a>
-# 개발 환경
+<a name="env"></a>
+# 환경
 
-- **Weight and Bias ([wandb](https://wandb.ai/))**
-- **Tensorflow 1.15**
-    - [NeRF 공식 저장소](https://github.com/bmild/nerf)와 [NeRF 공식 저장소를 수정하여 wandb 가 자동으로 연결되도록 수정한 저장소](https://github.com/ProtossDragoon/nerf-wandb)는 TensorFlow 1.15 를 사용합니다.
 - **Google COLAB**
     - 플랭크현동팀의 모든 실험은 Google COLAB Pro, Google COLAB Pro+ 에서 진행되었습니다.
     - 환경에 대한 걱정 없이 실행할 수 있도록 이미 **의존성이 모두 스크립트로 정의**되어 있는 [플랭크현동팀의 노트북들](https://github.com/ProtossDragoon/PlankHyundong/tree/main/notebooks)이 준비되어 있습니다.
+- **Weight and Bias ([wandb](https://wandb.ai/))**
+- **Local Light Field Fusion ([LLFF](https://github.com/Fyusion/LLFF)), [COLMAP](https://github.com/colmap/colmap)**
+- **Tensorflow 1.15**
+    - [NeRF 공식 저장소](https://github.com/bmild/nerf)와 [NeRF 공식 저장소를 수정하여 wandb 가 자동으로 연결되도록 수정한 저장소](https://github.com/ProtossDragoon/nerf-wandb)는 TensorFlow 1.15 를 사용합니다.
+
+<table>
+<thead align="center">
+  <tr>
+    <th>Blender</th>
+    <th>Sindoh</th>
+    <th>3DWOX1/DP203</th>
+  </tr>
+</thead>
+<tbody align="center">
+  <tr>
+    <td><img width="200" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/logo_blender.png"></td>
+    <td><img width="200" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/logo_sindoh.png"></td>
+    <td><img width="200" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/printer_3DWOX1.png"></td>
+  </tr>
+</tbody>
+</table>
 
 <a name="usage"></a>
 # 팀
