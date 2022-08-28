@@ -92,9 +92,9 @@
     <td style="width:33%;"><img src=https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/wandb_visualize_implicit_representation.gif></td>
   </tr>
   <tr>
-    <td>RGB 비디오</td>
-    <td>이미지와 포즈</td>
-    <td>뉴럴넷 기반 3d 표현</td>
+    <td style="width:33%;">RGB 비디오</td>
+    <td style="width:34%;">이미지와 포즈</td>
+    <td style="width:33%;">뉴럴넷 기반 3d 표현</td>
   </tr>
 </tbody>
 </table>
@@ -114,9 +114,9 @@
     <td style="width:33%;"><img src=https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/result_1.png></td>
   </tr>
   <tr>
-    <td>메쉬가 적용된 3d 표현</td>
-    <td>슬라이서 소프트웨어</td>
-    <td>결과물 피규어</td>
+    <td style="width:33%;">메쉬가 적용된 3d 표현</td>
+    <td style="width:34%;">슬라이서 소프트웨어</td>
+    <td style="width:33%;">결과물 피규어</td>
   </tr>
 </tbody>
 </table>
