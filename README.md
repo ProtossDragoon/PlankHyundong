@@ -87,9 +87,9 @@
 </thead>
 <tbody align="center">
   </tr>
-    <td><img width="300" src=https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/non_forward_facing.gif></td>
-    <td><img width="300" src=https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/wandb_show_pose.gif></td>
-    <td><img width="300" src=https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/wandb_visualize_implicit_representation.gif></td>
+    <td><img src=https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/non_forward_facing.gif></td>
+    <td><img src=https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/wandb_show_pose.gif></td>
+    <td><img src=https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/wandb_visualize_implicit_representation.gif></td>
   </tr>
   <tr>
     <td>RGB 비디오</td>
@@ -110,9 +110,9 @@
 <tbody>
 </tbody>
   <tr>
-    <td><img width="300" src=https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/meshed_representation.gif></td>
-    <td><img width="300" src=https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/slicer_sw.gif></td>
-    <td><img width="300" src=https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/result_1.png></td>
+    <td><img src=https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/meshed_representation.gif></td>
+    <td><img src=https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/slicer_sw.gif></td>
+    <td><img src=https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/result_1.png></td>
   </tr>
   <tr>
     <td>메쉬가 적용된 3d 표현</td>
