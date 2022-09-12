@@ -26,7 +26,7 @@
 </thead>
 <tbody align="center">
   <tr>
-    <th><img width="330" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/hyundong360_snapshot"></td></th>
+    <th><img width="330" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/hyundong360_snapshot.jpg"></td></th>
     <td><img width="330" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/figure_middle_collage.png"></td>
     <td><img width="330" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/figure_final_collage.jpg"></td>
   </tr>
