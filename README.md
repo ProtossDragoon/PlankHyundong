@@ -30,11 +30,6 @@
     <td><img width="330" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/figure_middle_collage.png"></td>
     <td><img width="330" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/figure_final_collage.jpg"></td>
   </tr>
-  <tr>
-    <td>Accuracy</td>
-    <td>47%</td>
-    <td>54%</td>
-  </tr>
 </tbody>
 </table>
 
