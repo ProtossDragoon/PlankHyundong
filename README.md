@@ -230,6 +230,8 @@ NeRF 의 입력은 (이미지, 카메라포즈) 의 집합입니다. 커스텀 �
 <a name="step5"></a>
 ## NeRF 모델로부터 Mesh 만들고 다듬기
 
+### Mesh 만들기
+
 <p style="text-align:center;">
 <a href="https://colab.research.google.com/github/ProtossDragoon/PlankHyundong/blob/main/notebooks/extract_mesh_colab.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
@@ -237,36 +239,37 @@ NeRF 의 입력은 (이미지, 카메라포즈) 의 집합입니다. 커스텀 �
 
 **NOTE:** 반드시 GPU 런타임을 사용해야 합니다.
 
-NeRF 모델로 학습시킨 implicit representation 을 시각화 하기 위해, 모델 학습 과정에서의 가중치를 이용해 turntable.mp4 영상과 Mesh(.obj)를 생성해내는 과정이다. 학습시킨 모델을 로드한 뒤, PyMCubes 패키지를 통해 표면(iso-surface)을 추출하고, 그 결과물을 저장한다.
+NeRF 모델로 학습시킨 학습시킨 모델을 로드한 뒤, `PyMCubes` 패키지를 통해 표면(iso-surface)을 추출하고 그 결과물인 `3d.obj` 파일을  저장하는 단계입니다. 이 노트북의 출처는 [NeRF 공식 저장소](https://github.com/bmild/nerf/blob/master/extract_mesh.ipynb)입니다.
+ 
+- 위 노트북에서는 학습된 NeRF 모델의 3D 표현(implicit representation)을 시각화 하기 위해 `pyrender` 을 이용해 `turntable.mp4` 영상을 생성합니다.
+- `trimesh` 가 적용된 3D 표현을 실시간으로 미리보기할 수 있습니다. 
+- `N` 과 `threshold` 변수값 조절을 통해 추출한 결과물의 퀄리티 변화를 확인할 수 있습니다.
+
+### Mesh 다듬기
 
 <table>
 <thead align="center">
   <tr>
-    <th></th>
-    <th>문제</th>
-    <th>해결</th>
+    <th>누끼를 따지 않은 이미지를<br> 사용하는 경우</th>
+    <th>누끼를 딴 이미지를<br> 사용하는 경우</th>
   </tr>
 </thead>
 <tbody align="center">
   <tr>
-    <td>제거</td>
-    <td><img src="" alt=""></td>
+    <td><img src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/trim_mesh.png" alt=""></td>
     <td><img src="" alt=""></td>
   </tr>
   <tr>
-    <td>생성</td>
-    <td><img src="" alt=""></td>
-    <td><img src="" alt=""></td>
+    <td>바닐라 NeRF 는 피사체와 배경을 분리하지 못합니다. 따라서 NeRF 모델을 이용해 생성한 3D 표현은 피사체 주변의 바닥, 근처 장애물 등을 모두 만들어넣습니다. 따라서 현실에서 직접 취득한 데이터를 그대로 사용하는 경우 결과물의 상태가 좋지 않을 가능성이 높습니다.</td>
+    <td>이를 해결하기 위해 추출된 이미지에서 누끼를 제거해 사용하면 좋습니다. 누끼를 제거하고 배경을 회색 등 단색으로 채워 주세요. 그 다음에 학습하면 제거해야 할 잡음들이 많이 사라집니다.</td>
   </tr>
 </tbody>
 </table>
 
-이때 그 결과물의 상태가 좋지 않을 가능성이 높다. 
-
 <a name="step6"></a>
 ## 피규어 인쇄하기
 
-`TODO`
+`.obj` 파일을 타깃 프린터의 슬라이서 프로그램에 업로드합니다. 예를 들어,  3D 프린터 3DWOX(DP103)을 사용하였다.
 
 <a name="step7"></a>
 ## 인쇄된 피규어 후가공하기
@@ -279,7 +282,7 @@ NeRF 모델로 학습시킨 implicit representation 을 시각화 하기 위해,
 <a name="dataandnerf"></a>
 ## 데이터셋 및 NeRF 모델 파라미터 실험
 
-![wandb_experiment](https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/wandb_experiment.gif )
+![wandb_experiment](https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/wandb_experiment.gif)
 
 - 다양한 시행착오들과 인사이트는 [wandb 리포트](https://wandb.ai/plank-hyundong/plank-hyundong/reports/Hyperparameter-Experiment-Ablation-Study--VmlldzoyNDAzMDYz)에서 모두 확인할 수 있다.
 
