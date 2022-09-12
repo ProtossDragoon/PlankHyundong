@@ -19,30 +19,21 @@
 <table>
 <thead align="center">
   <tr>
-    <th>시각화</th>
-    <th>최초 데이터셋</th>
-    <th>노이즈 제거</th>
-    <th>누끼 제거</th>
+    <th></th>
+    <th>중간 결과물</th>
+    <th>최종 결과물</th>
   </tr>
 </thead>
 <tbody align="center">
   <tr>
-    <td>RGB</td>
-    <td><img src=https://github.com/ProtossDragoon/NeRF-TF2-Keras/blob/master/docs/result.gif alt="" width="200" height="200"></td>
-    <td><img src=https://github.com/ProtossDragoon/NeRF-TF2-Keras/blob/master/docs/result_2.gif alt="" width="200" height="200"></td>
-    <td><img src=https://github.com/ProtossDragoon/NeRF-TF2-Keras/blob/master/docs/result_3.gif alt="" width="200" height="200"></td>
+    <td></td>
+    <td><img width="330" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/figure_middle_collage.png"></td>
+    <td><img width="330" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/figure_final_collage.png"></td>
   </tr>
   <tr>
-    <td>disparity</td>
-    <td><img src=https://github.com/ProtossDragoon/NeRF-TF2-Keras/blob/master/docs/result_80_64_1.gif alt="" width="200" height="200"></td>
-    <td><img src=https://github.com/ProtossDragoon/NeRF-TF2-Keras/blob/master/docs/result_80_64_2.gif alt="" width="200" height="200"></td>
-    <td><img src=https://github.com/ProtossDragoon/NeRF-TF2-Keras/blob/master/docs/result_80_64_3.gif alt="" width="200" height="200"></td>
-  </tr>
-  <tr>
-    <td>3D figure</td>
-    <td><img src=https://github.com/ProtossDragoon/NeRF-TF2-Keras/blob/master/docs/result_160_64_32_1b-30.gif alt="" width="200" height="200"></td>
-    <td><img src=https://github.com/ProtossDragoon/NeRF-TF2-Keras/blob/master/docs/result_160_64_32_1b-10.gif alt="" width="200" height="200"></td>
-    <td><img src=https://github.com/ProtossDragoon/NeRF-TF2-Keras/blob/master/docs/result_160_64_32_1b_10.gif alt="" width="200" height="200"></td>
+    <td>Accuracy</td>
+    <td>47%</td>
+    <td>54%</td>
   </tr>
 </tbody>
 </table>
