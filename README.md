@@ -31,6 +31,11 @@
     <td><img width="330" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/figure_final_collage.jpg"></td>
   </tr>
   <tr>
+    <th></th>
+    <td><img width="330" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/hyundong360.gif"></td>
+    <td><img width="330" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/hyundong360_removebg.gif"></td>
+  </tr>
+  <tr>
     <td></td>
     <td>2022년 8월 9일</td>
     <td>2022년 8월 24일</td>
