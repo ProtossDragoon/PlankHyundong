@@ -257,7 +257,7 @@ NeRF 모델로 학습시킨 학습시킨 모델을 로드한 뒤, `PyMCubes` 패
 <tbody align="center">
   <tr>
     <td><img width="300" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/trim_mesh.png" alt=""></td>
-    <td><img width="300" src="" alt=""></td>
+    <td><img width="300" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/trim_mesh_case_without_background.png" alt=""></td>
   </tr>
   <tr>
     <td>바닐라 NeRF 는 피사체와 배경을 분리하지 못합니다. 따라서 NeRF 모델을 이용해 생성한 3D 표현은 피사체 주변의 바닥, 근처 장애물 등을 모두 만들어넣습니다. 따라서 현실에서 직접 취득한 데이터를 그대로 사용하는 경우 결과물의 상태가 좋지 않을 가능성이 높습니다.</td>
