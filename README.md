@@ -64,7 +64,7 @@
         - [학습 옵션 관련 실험](#step4-1-experiment)
     - [NeRF 모델로부터 Mesh 만들고 다듬기](#step5)
       - [Mesh 만들기](#step5-1)
-        - [3D 프린터 옵션 실험](#step5-1-experiment)
+        - [Mesh Renderer 파라미터 실험](#step5-1-experiment)
       - [Mesh 다듬기](#step5-2)
     - [피규어 인쇄 및 후가공하기](#step6)
       - [피규어 인쇄하기](#step6-1)
@@ -273,6 +273,17 @@ NeRF 모델로 학습시킨 학습시킨 모델을 로드한 뒤, `PyMCubes` 패
 - `trimesh` 가 적용된 3D 표현을 실시간으로 미리보기할 수 있습니다. 
 - `N` 과 `threshold` 변수값 조절을 통해 추출한 결과물의 퀄리티 변화를 확인할 수 있습니다.
 
+<a name="step5-1-experiment"></a>
+### Mesh Renderer 파라미터 실험
+
+| param      |       role       | 실험값 (**채택값**) |
+|:----------:|:---------------:|:-------------:|
+| threshold  | threshold 값이 작으면 파티클의 밀도가 적은 공간에서도 mesh 를 생성합니다. 높을수록 용량이 감소합니다. | 50, **100** |
+| N          | 쉽게 말해 해상도값입니다. 높을수록 용량이 증가합니다. | 256, **512** |
+
+- 표면(iso-surface)을 추출할 때 파라미터 `threshold` 와 `N` 값의 미세소정을 통해 결과물의 성능을 향상시킬 수 있습니다.
+- 플랭크현동 프로젝트에서는 결과물의 퀄리티 및 GPU, 메모리 등의 리소스를 고려하여 이상적인 파라미터(threshold=100, N=512)를 채택했습니다.
+
 <a name="step5-2"></a>
 ### Mesh 다듬기
 
@@ -413,11 +424,6 @@ NeRF 모델로 학습시킨 학습시킨 모델을 로드한 뒤, `PyMCubes` 패
 
 <a name="evaluation"></a>
 # 평가
-
-<a name="renderer"></a>
-## Mesh Renderer 파라미터 실험
-
-`TODO`
 
 <a name="env"></a>
 # 환경
