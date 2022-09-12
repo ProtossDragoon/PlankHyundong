@@ -356,16 +356,16 @@ NeRF 모델로 학습시킨 학습시킨 모델을 로드한 뒤, `PyMCubes` 패
 </thead>
 <tbody align="center">
   <tr>
-    <td><img width="300" alt="1234_ff" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/result_1234_ff_.jpg"></td>
-    <td><img width="300" alt="5678_ff" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/result_5678_ff_.jpg"></td>
+    <td><img width="300" alt="1234_ff" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/result_1234_ff.jpg"></td>
+    <td><img width="300" alt="5678_ff" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/result_5678_ff.jpg"></td>
   </tr>
   <tr>
-    <td><img width="300" alt="1234_back" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/result_1234_back_.jpg"></td>
-    <td><img width="300" alt="5678_back" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/result_5678_back_.jpg"></td>
+    <td><img width="300" alt="1234_back" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/result_1234_back.jpg"></td>
+    <td><img width="300" alt="5678_back" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/result_5678_back.jpg"></td>
   </tr>
   <tr>
-    <td><img width="300" alt="1234_side" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/result_1234_side_.jpg"></td>
-    <td><img width="300" alt="5678_side" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/result_5678_side_.jpg"></td>
+    <td><img width="300" alt="1234_side" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/result_1234_side.jpg"></td>
+    <td><img width="300" alt="5678_side" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/result_5678_side.jpg"></td>
   </tr>
 </tbody>
 </table>
