@@ -12,7 +12,7 @@
 
 # 플랭크 현동 3D
 
-현동이가 플랭크를 흔들림 없이 버텨줄수록 프로젝트 난이도는 낮아지고, 현동이의 플랭크가 흔들흔들 불안정할수록 프로젝트 난이도가 매우 높아지는 "tradeoff" 상황에 놓이게 되는데... 헬스보이 현동이가 알려주는 정확한 플랭크 자세! **헬창이 되고 싶은 사람들은 그의 자세를 360도로 요리조리 살펴보고 자신과 비교해보면서 운동해보는건 어떨까?** 🏋🏻
+헬스보이 현동이가 알려주는 정확한 플랭크 자세! **헬창이 되고 싶은 사람들은 그의 자세를 360도로 요리조리 살펴보고 자신과 비교해보면서 운동해보는건 어떨까?** 🏋🏻
 
 ## 최종 결과물
 
@@ -291,9 +291,64 @@ NeRF 모델로 학습시킨 implicit representation 을 시각화 하기 위해,
 <a name="printer"></a>
 ## 3D 프린터 옵션 실험
 
-- 가장 중요한 옵션들은 레이어 높이, 노즐 두께, 출력 속도이다.
-- 각각에 따라 결과물의 디테일이 달라진다.
-- 목록을 리스트업하여 메이커에게 전달했다.
+- 3D 프린터의 다양한 옵션에 따라 결과물의 퀄리티가 달라집니다.
+- 3D 프린터의 결과물의 퀄리티에 가장 많은 영향을 미치는 요소는 레이어 높이, 출력 속도입니다.
+
+|   |       옵션       | 레이어 높이 | 출력 속도 | 소요된 출력시간 |
+|:--:|:---------------:|:------:|:--------:|:----------:|
+| 1️⃣ | 데이터 정제           | 0.1mm |  20mm/s | 17h |
+| 2️⃣ | 데이터 정제           | 0.1mm |  40mm/s | 14h |
+| 3️⃣ | 데이터 정제           | 0.2mm |  20mm/s | 9h  |
+| 4️⃣ | 데이터 정제           | 0.2mm |  40mm/s | 7h  |
+| 5️⃣ | 데이터 정제 + 누끼 제거 | 0.1mm |  20mm/s | 4h  |
+| 6️⃣ | 데이터 정제 + 누끼 제거 | 0.1mm |  40mm/s | 4h  |
+| 7️⃣ | 데이터 정제 + 누끼 제거 | 0.2mm |  20mm/s | 3h  |
+| 8️⃣ | 데이터 정제 + 누끼 제거 | 0.2mm |  40mm/s | 3h  |
+
+<table style="table-layout: fixed; width: 100%;">
+<thead align="center" >
+  <tr>
+    <th>정제된 데이터</th>
+    <th>레이어 높이 0.1mm</th>
+    <th>레이어 높이 0.2mm</th>
+  </tr>
+</thead>
+<tbody align="center">
+  <tr>
+    <td>출력 속도 20mm/s</td>
+    <td><img width="300" alt="1️⃣" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/result_cleanup_01_20.jpg"></td>
+    <td><img width="300" alt="3️⃣" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/result_cleanup_02_20.jpg"></td>
+  </tr>
+  </tr>
+    <td>출력 속도 40mm/s</td>
+    <td><img width="300" alt="2️⃣" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/result_cleanup_01_40.jpg"></td>
+    <td><img width="300" alt="4️⃣" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/result_cleanup_02_40.jpg"></td>
+  </tr>
+</tbody>
+</table>
+
+<table style="table-layout: fixed; width: 100%;">
+<thead align="center" >
+  <tr>
+    <th>정제 + 누끼가 제거된</th>
+    <th>레이어 높이 0.1mm</th>
+    <th>레이어 높이 0.2mm</th>
+  </tr>
+</thead>
+<tbody align="center">
+  <tr>
+    <td>출력 속도 20mm/s</td>
+    <td><img width="300" alt="5️⃣" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/result_background_01_20.jpg"></td>
+    <td><img width="300" alt="7️⃣" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/result_background_02_20.jpg"></td>
+  </tr>
+  </tr>
+    <td>출력 속도 40mm/s</td>
+    <td><img width="300" alt="6️⃣" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/result_background_01_40.jpg"></td>
+    <td><img width="300" alt="8️⃣" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/result_background_02_40.jpg"></td>
+  </tr>
+</tbody>
+</table>
+
 
 <a name="env"></a>
 # 환경
@@ -323,7 +378,7 @@ NeRF 모델로 학습시킨 implicit representation 을 시각화 하기 위해,
 </tbody>
 </table>
 
-<a name="usage"></a>
+<a name="team"></a>
 # 팀
 
 - [세종대학교 인공지능 동아리 SAI](https://github.com/sju-coml/SAI)
