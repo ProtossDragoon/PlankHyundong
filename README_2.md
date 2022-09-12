@@ -64,13 +64,15 @@
 </thead>
 <tbody align="center">
   <tr>
-    <td><img src=...></td>
+    <td><img src="https://github.com/ProtossDragoon/PlankHyundong/blob/c466d902d2ec4d276452b78fdf258d2e73a0da13/docs/images/collecting_video.gif"></td>
   </tr>
   <tr>
     <td>이 프로젝트에서 사용한 방법</td>
   </tr>
 </tbody>
 </table>
+
+촬영 권장사항과 주의사항은 <a href="https://github.com/ProtossDragoon/PlankHyundong/tree/docs#step1">다음</a>을 확인해주세요!
 
 <a name="step2"></a>
 ## 2️⃣ 비디오로부터 이미지 샘플링하기
@@ -86,6 +88,8 @@
 
 - ✅ 카메라 트래젝토리가 길다면 더 잘게 잘라 주는 것이 좋습니다.
 - ❗ 카메라 트래젝토리가 짧고 렌즈를 열어두는 시간이 짧은 경우, 동영상으로부터 이미지를 너무 잘게 샘플링한다면 성능에 악영향을 미칠 수 있습니다.
+
+자세한 파라미터는 <a href="https://github.com/ProtossDragoon/PlankHyundong/tree/docs#step2">다음</a>을 확인해주세요!
 
 <a name="step3"></a>
 ## 3️⃣ 이미지에 대한 카메라 포즈 구하기
