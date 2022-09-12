@@ -258,12 +258,12 @@ NeRF 모델로 학습시킨 학습시킨 모델을 로드한 뒤, `PyMCubes` 패
 </thead>
 <tbody align="center">
   <tr>
-    <td><img width="300" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/trim_mesh.png" alt=""></td>
-    <td><img width="300" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/trim_mesh_case_without_background.jpg" alt=""></td>
+    <td><img width="320" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/trim_mesh.png" alt=""></td>
+    <td><img width="320" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/trim_mesh_case_without_background.jpg" alt=""></td>
   </tr>
   <tr>
-    <td>바닐라 NeRF 는 피사체와 배경을 분리하지 못합니다. 따라서 NeRF 모델을 이용해 생성한 3D 표현은 피사체 주변의 바닥, 근처 장애물 등을 모두 만들어넣습니다. 따라서 현실에서 직접 취득한 데이터를 그대로 사용하는 경우 결과물의 상태가 좋지 않을 가능성이 높습니다.</td>
-    <td>이를 해결하기 위해 추출된 이미지에서 누끼를 제거해 사용하면 좋습니다. 누끼를 제거하고 배경을 회색 등 단색으로 채워 주세요. 그 다음에 학습하면 제거해야 할 잡음들이 많이 사라집니다.</td>
+    <td>바닐라 NeRF 는 피사체와 배경을 분리하지 못합니다. 따라서 NeRF 모델을 이용해 생성한 3D 표현애는 피사체 주변의 바닥, 근처 장애물 등이 포함됩니다. 따라서 현실에서 직접 취득한 데이터를 그대로 사용하는 경우 수작업에 많은 시간이 필요할 수 있습니다.</td>
+    <td>만약 추출된 이미지에서 누끼를 제거해 사용했다면, 왼쪽과 같은 문제를 조금 덜어낼 수 있습니다. 누끼가 제거된 영상들로 NeRF 모델을 학습하면 수작업으로 제거해야 할 배경 잡음들이 많이 사라집니다.</td>
   </tr>
 </tbody>
 </table>
