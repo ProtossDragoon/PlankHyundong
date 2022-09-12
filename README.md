@@ -269,8 +269,6 @@ NeRF 모델로 학습시킨 학습시킨 모델을 로드한 뒤, `PyMCubes` 패
 <a name="step6"></a>
 ## 피규어 인쇄하기
 
-![waiting_for_printing](https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/waiting_for_printing.jpeg)
-
 `.obj` 파일을 타깃 프린터가 호환되는 슬라이서 프로그램에 업로드하여 출력하는 단계입니다. 예를 들어, 사용할 프린터가 3DWOX(DP203) 인 경우, 대표적으로 사용할 수 있는 슬라이서 프로그램은 Sindoh 슬라이서입니다.
 
 <table>
@@ -278,16 +276,19 @@ NeRF 모델로 학습시킨 학습시킨 모델을 로드한 뒤, `PyMCubes` 패
   <tr>
     <th>3D 프린터</th>
     <th>슬라이서 프로그램</th>
+    <th>출력 준비작업</th>
   </tr>
 </thead>
 <tbody align="center">
   <tr>
     <td>3DWOX1(DP203)</td>
     <td><a ref="https://www.sindoh.com/downcenter/dc_comSearch.do">Sindoh 슬라이서</a></td>
+    <td>서포트, 내부 채움, 파라미터 설정 등</td>
   </tr>
   <tr>
     <td><img width="200" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/printer_3DWOX1.png"></td>
     <td><img width="200" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/logo_sindoh.png"></td>
+    <td><img width="200" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/waiting_for_printing.jpeg"></td>
   </tr>
 </tbody>
 </table>
