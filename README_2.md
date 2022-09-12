@@ -100,10 +100,11 @@
 
 NeRF 의 입력은 (이미지, 카메라포즈) 의 집합입니다. 커스텀 이미지로부터 이미지 각각에 해당하는 카메라 포즈를 계산하기 위해 [COLMAP](https://github.com/colmap/colmap)을 기반으로 동작하는 [LLFF](https://github.com/Fyusion/LLFF) 저자의 스크립트를 사용합니다. 
 
-<p align="center"><img src="https://github.com/ProtossDragoon/PlankHyundong/blob/7fe9587f7c9c2752f5898dd41df171b86fe962d6/docs/images/camera_poses.png" width="400" height="225"></p>
+<p align="center"><img src="https://github.com/ProtossDragoon/PlankHyundong/blob/85638bda940f10d00839e656b4f9f487f9742aa8/docs/images/camera_poses.png" width="800" height="450"></p>
 
 실행이 완료되면 데이터셋 폴더 안에 NeRF 모델을 실행시키는 데 필요한 `poses_bounds.npy` 파일이 생성됩니다.
 
+<a name="step4"></a>
 ## 4️⃣ NeRF 모델 학습시키기
 
 <p style="text-align:center;">
@@ -115,9 +116,9 @@ NeRF 의 입력은 (이미지, 카메라포즈) 의 집합입니다. 커스텀 �
 
 ### 학습 옵션
 
-|       옵션       |  파라미터 | 역할 |
-|:---------------:|:------:|:---:|
-| `--no_ndc`, `--spherify`, `--lindisp` |                    | forward facing scene 에서는 필요하지 않지만, 360 scene 에 대해서는 반드시 사용해야 하는 플래그입니다.|
+|       옵션      | 역할 |
+|:---------------:|:---:|
+| `--no_ndc`, `--spherify`, `--lindisp` | forward facing scene 에서는 필요하지 않지만, 360 scene 에 대해서는 반드시 사용해야 하는 플래그입니다.|
 
 ### 결과
 <table>
@@ -163,26 +164,44 @@ NeRF 모델로 학습시킨 학습시킨 모델을 로드한 뒤, `PyMCubes` 패
 
 <br>
 
+<a name="step6"></a>
 ## 6️⃣ 피규어 인쇄하기
 <table>
+<thead align="center">
+  <tr>
+    <th>슬라이서 소프트웨어</th>
+    <th>출력 중인 모습</th>
+  </tr>
+</thead>
 <tbody align="center">
   <tr>
-    <td><img src="https://github.com/ProtossDragoon/PlankHyundong/blob/28540b734f3da1462d97e85ab46dcc206ad1ff70/docs/images/slicer_sw.gif"></td>
-    <td><img src="https://github.com/ProtossDragoon/PlankHyundong/blob/28540b734f3da1462d97e85ab46dcc206ad1ff70/docs/images/printing_figure.gif" width="300" height="400"></td>
+    <td><img src="https://github.com/ProtossDragoon/PlankHyundong/blob/28540b734f3da1462d97e85ab46dcc206ad1ff70/docs/images/slicer_sw.gif" width="480" width="640" height="360"></td>
+    <td><img src="https://github.com/ProtossDragoon/PlankHyundong/blob/28540b734f3da1462d97e85ab46dcc206ad1ff70/docs/images/printing_figure.gif" width="270" height="360"></td>
   </tr>
 </tbody>
 </table>
 
 
-<p align="center"><img src="https://github.com/ProtossDragoon/PlankHyundong/blob/28540b734f3da1462d97e85ab46dcc206ad1ff70/docs/images/slicer_sw.gif" width="400" height="225"></p>
-<p align="center"><img src="https://github.com/ProtossDragoon/PlankHyundong/blob/28540b734f3da1462d97e85ab46dcc206ad1ff70/docs/images/printing_figure.gif" width="300" height="400"></p>
-
-
 ### 인쇄된 피규어 후가공하기
-<p align="center"><img src="https://github.com/ProtossDragoon/PlankHyundong/blob/28540b734f3da1462d97e85ab46dcc206ad1ff70/docs/images/figure_final_bf.png" width="400" height="225"></p>
-<p align="center"><img src="https://github.com/ProtossDragoon/PlankHyundong/blob/28540b734f3da1462d97e85ab46dcc206ad1ff70/docs/images/figure_final.jpg" width="400" height="225"></p>
+<table>
+<thead align="center">
+  <tr>
+    <th></th>
+    <th>before</th>
+    <th>after</th>
+  </tr>
+</thead>
+<tbody align="center">
+  <tr>
+    <td>라프트 제거</td>
+    <td><img width="300" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/figure_postprocessing_before.jpg"></td>
+    <td><img width="300" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/figure_postprocessing_ongoing.jpg"></td>
+  </tr>
+</tbody>
+</table>
 
 <br>
+
 <a name="env"></a>
 # 환경
 
@@ -193,6 +212,23 @@ NeRF 모델로 학습시킨 학습시킨 모델을 로드한 뒤, `PyMCubes` 패
 - **Local Light Field Fusion ([LLFF](https://github.com/Fyusion/LLFF)), [COLMAP](https://github.com/colmap/colmap)**
 - **Tensorflow 1.15**
     - [NeRF 공식 저장소](https://github.com/bmild/nerf)와 [NeRF 공식 저장소를 수정하여 wandb 가 자동으로 연결되도록 수정한 저장소](https://github.com/ProtossDragoon/nerf-wandb)는 TensorFlow 1.15 를 사용합니다.
+
+<table>
+<thead align="center">
+  <tr>
+    <th>Google COLAB</th>
+    <th>Wandb</th>
+    <th>Tensorflow</th>
+  </tr>
+</thead>
+<tbody align="center">
+  <tr>
+    <td><img width="200" src="https://github.com/ProtossDragoon/PlankHyundong/blob/0337fbe609c45dbc6a7fbefdd9ae87408d699468/docs/images/colab.png"></td>
+    <td><img width="200" src="https://github.com/ProtossDragoon/PlankHyundong/blob/0337fbe609c45dbc6a7fbefdd9ae87408d699468/docs/images/wandb.png"></td>
+    <td><img width="200" src="https://github.com/ProtossDragoon/PlankHyundong/blob/0337fbe609c45dbc6a7fbefdd9ae87408d699468/docs/images/tensorflow.png"></td>
+  </tr>
+</tbody>
+</table>
 
 <table>
 <thead align="center">
@@ -210,6 +246,7 @@ NeRF 모델로 학습시킨 학습시킨 모델을 로드한 뒤, `PyMCubes` 패
   </tr>
 </tbody>
 </table>
+
 
 <a name="team"></a>
 # 팀
