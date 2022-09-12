@@ -43,8 +43,6 @@
 </tbody>
 </table>
 
-- 모든 실험 내역들을 [wandb 프로젝트](https://wandb.ai/plank-hyundong/plank-hyundong)에서 확인할 수 있습니다.
-
 # 목차
 
 - [구성요소별 디테일](#steps)
