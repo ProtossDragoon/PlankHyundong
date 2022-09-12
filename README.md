@@ -371,13 +371,21 @@ NeRF 모델로 학습시킨 학습시킨 모델을 로드한 뒤, `PyMCubes` 패
 </tbody>
 </table>
 
+- 특히 레이어높이 옵션을 변경하면 출력물의 정교함을 조절할 수 있습니다.
+- 출력속도가 느리면 출력물 중간중간 거미줄같은 잔해가 생기는 현상이 나타날 수 있습니다.
+
 <table style="table-layout: fixed; width: 100%;">
 <thead align="center" >
   <tr>
-    <th> 결과물 </th>
+    <th> 1️⃣ 과 3️⃣ 의 손 비교 </th>
+    <th> 1️⃣ 3️⃣ 5️⃣ 7️⃣ 의 거미줄 현상</th>
   </tr>
 </thead>
 <tbody align="center">
+  <tr>
+    <td><img width="300" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/printer_experiment_hand.png"></td>
+    <td><img width="300" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/printer_experiment_spider.png"></td>
+  </tr>
 </tbody>
 </table>
 
