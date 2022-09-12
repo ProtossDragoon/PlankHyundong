@@ -151,11 +151,11 @@
 </tbody>
 </table>
 
-- ✅ 충분한 조명을 확보하여 충분히 짧은 셔터 속도를 사용할 수 있도록 준비
-- ✅ 피사체를 가운데에 두고 촬영자는 360도로 돌면서 촬영
-- ✅ 다양한 각도를 수집하기 위해 위 아래로 S자를 만들면서 촬영
-- ✅ 각 각도에 대한 이미지를 동일하게 수집하기 위해 일정한 속도로 돌며 촬영
-- ✅ 정적인 물체에 최적화된 NeRF 특성을 고려하여 피사체는 움직임을 최소화
+- ✅ 충분한 조명을 확보하여 충분히 짧은 셔터 속도를 사용할 수 있도록 준비합니다.
+- ✅ 피사체를 가운데에 두고 촬영자는 360도로 돌면서 촬영합니다.
+- ✅ 다양한 각도를 수집하기 위해 위 아래로 S자를 만들면서 촬영합니다.
+- ✅ 각 각도에 대한 이미지를 동일하게 수집하기 위해 일정한 속도로 돌며 촬영합니다.
+- ✅ NeRF 의 설계에는 동적인 물체가 고려되지 않았으므로 피사체의 움직임을 최소화합니다.
 
 ### 촬영 주의사항
 
@@ -174,9 +174,9 @@
 </tbody>
 </table>
 
-- ❗ 피사체 주변에는 번들거리는 물체가 없도록 주의 
+- ❗ 피사체 주변에는 번들거리는 물체가 없도록 주의합니다.
     - 실험을 통해 피사체 주변에 차가 많을 때 결과가 좋지 않음을 확인했습니다.
-- ❗ 피사체를 제외한 주변의 움직이는 사물이나 그림자 등이 등장하지 않도록 주의 
+- ❗ 피사체를 제외한 주변의 움직이는 사물이나 그림자 등이 등장하지 않도록 주의합니다.
     - 실험을 통해 촬영자의 팔이 나온 데이터를 제거했을 때 성능이 매우 향상됨을 확인했습니다.
 
 <a name="step2"></a>
@@ -350,20 +350,24 @@ NeRF 모델로 학습시킨 학습시킨 모델을 로드한 뒤, `PyMCubes` 패
 <table style="table-layout: fixed; width: 100%;">
 <thead align="center" >
   <tr>
+    <th> 결과물 </th>
     <th> 1️⃣ 2️⃣ 3️⃣ 4️⃣ </th>
     <th> 5️⃣ 6️⃣ 7️⃣ 8️⃣ </th>
   </tr>
 </thead>
 <tbody align="center">
   <tr>
+    <td>정면</td>
     <td><img width="300" alt="1234_ff" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/result_1234_ff.jpg"></td>
     <td><img width="300" alt="5678_ff" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/result_5678_ff.jpg"></td>
   </tr>
   <tr>
+    <td>후면</td>
     <td><img width="300" alt="1234_back" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/result_1234_back.jpg"></td>
     <td><img width="300" alt="5678_back" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/result_5678_back.jpg"></td>
   </tr>
   <tr>
+    <td>측면</td>
     <td><img width="300" alt="1234_side" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/result_1234_side.jpg"></td>
     <td><img width="300" alt="5678_side" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/result_5678_side.jpg"></td>
   </tr>
