@@ -18,7 +18,7 @@
 
 ## 최종 결과물
 <p align="center"><img src="docs/images/figure_final.jpg" width="800" height="450"></p>
-본 피규어는 <a href="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/GUIDELINE.md#evaluation">정성평가</a>를 진행해 얻 결과물입니다.
+본 피규어는 <a href="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/GUIDELINE.md#evaluation">정성평가</a>를 진행해 얻은 결과물입니다.
 
 # 목차
 
