@@ -207,7 +207,7 @@
 
 **NOTE:** 반드시 GPU 런타임을 사용해야 합니다.
 
-NeRF 의 입력은 (이미지, 카메라포즈) 의 집합입니다. 커스텀 이미지로부터 이미지 각각에 해당하는 카메라 포즈를 계산하기 위해 [COLMAP](https://github.com/colmap/colmap)을 기반으로 동작하는 [LLFF](https://github.com/Fyusion/LLFF) 저자의 스크립트를 사용합니다. 하지만 LLFF 스크립트를 구동할 수 있는 환경을 구축하는 일은 꽤 까다롭습니다. 이러한 문제를 피하기 위해 [플랭크현동이 제공하는 노트북]()을 사용하세요. COLAB 클라우드 컴퓨터에서 모든 연산이 이루어집니다. 실행이 완료되면 데이터셋 폴더 안에 NeRF 모델을 실행시키는 데 필요한 `poses_bounds.npy` 파일이 생성됩니다.
+NeRF 의 입력은 (이미지, 카메라포즈) 의 집합입니다. 커스텀 이미지로부터 이미지 각각에 해당하는 카메라 포즈를 계산하기 위해 [COLMAP](https://github.com/colmap/colmap)을 기반으로 동작하는 [LLFF](https://github.com/Fyusion/LLFF) 저자의 스크립트를 사용합니다. 하지만 LLFF 스크립트를 구동할 수 있는 환경을 구축하는 일은 꽤 까다롭습니다. 이러한 문제를 피하기 위해 [플랭크현동이 제공하는 노트북](https://github.com/ProtossDragoon/PlankHyundong/blob/main/notebooks/colmap_colab.ipynb)을 사용하세요. COLAB 클라우드 컴퓨터에서 모든 연산이 이루어집니다. 실행이 완료되면 데이터셋 폴더 안에 NeRF 모델을 실행시키는 데 필요한 `poses_bounds.npy` 파일이 생성됩니다.
 
 <a name="step4"></a>
 ## NeRF 모델 학습시키기
@@ -269,7 +269,28 @@ NeRF 모델로 학습시킨 학습시킨 모델을 로드한 뒤, `PyMCubes` 패
 <a name="step6"></a>
 ## 피규어 인쇄하기
 
-`.obj` 파일을 타깃 프린터의 슬라이서 프로그램에 업로드합니다. 예를 들어,  3D 프린터 3DWOX(DP103)을 사용하였다.
+![waiting_for_printing](https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/waiting_for_printing.png)
+
+`.obj` 파일을 타깃 프린터가 호환되는 슬라이서 프로그램에 업로드하여 출력하는 단계입니다. 예를 들어, 사용할 프린터가 3DWOX(DP203) 인 경우, 대표적으로 사용할 수 있는 슬라이서 프로그램은 Sindoh 슬라이서입니다.
+
+<table>
+<thead align="center">
+  <tr>
+    <th>3D 프린터</th>
+    <th>슬라이서 프로그램</th>
+  </tr>
+</thead>
+<tbody align="center">
+  <tr>
+    <td><img width="200" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/printer_3DWOX1.png"></td>
+    <td><img width="200" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/logo_sindoh.png"></td>
+  </tr>
+  <tr>
+    <td>3DWOX1(DP203)</td>
+    <td><a ref="https://www.sindoh.com/downcenter/dc_comSearch.do">Sindoh 슬라이서</a></td>
+  </tr>
+</tbody>
+</table>
 
 <a name="step7"></a>
 ## 인쇄된 피규어 후가공하기
