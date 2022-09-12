@@ -67,7 +67,7 @@
     <td><img src="https://github.com/ProtossDragoon/PlankHyundong/blob/c466d902d2ec4d276452b78fdf258d2e73a0da13/docs/images/collecting_video.gif"></td>
   </tr>
   <tr>
-    <td>이 프로젝트에서 사용한 방법</td>
+    <td>이 프로젝트에서 촬영한 방법</td>
   </tr>
 </tbody>
 </table>
