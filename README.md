@@ -65,6 +65,7 @@
     - [Mesh Renderer 파라미터 실험](#renderer)
     - [3D 프린터 옵션 실험](#printer)
 - [환경](#env)
+- [도와주세요](#todo)
 - [팀](#team)
 
 <a name="quickstart"></a>
@@ -403,6 +404,13 @@ NeRF 모델로 학습시킨 학습시킨 모델을 로드한 뒤, `PyMCubes` 패
   </tr>
 </tbody>
 </table>
+
+<a name="todo"></a>
+# 도와주세요
+
+- [NeRF 이후의 연구 결과물](https://docs.google.com/spreadsheets/d/1l9NnZXEUVwPLEHnb81_gdXcD1DCXJUaR2RkeRIaMSo0/edit?usp=sharing) - 가령 동적 피사체에 대응할 수 있고 정교한 3D 표현을 만들어낼 수 있는 모델 - 들을 적용해보아야 합니다.
+- 모델에 다양한 연산들을 추가하고 모델의 구조를 변경하여 바닐라 NeRF 모델의 성능을 뛰어넘는 결과를 만들어보아야 합니다.
+- 파이프라인의 요소를 각각 별도의 노트북으로 분리한 상태로 관리하는 것이 아니라 파이프라인 요소들 각각을 명확히 이해하고 온전하게 연결해야 합니다.
 
 <a name="team"></a>
 # 팀
