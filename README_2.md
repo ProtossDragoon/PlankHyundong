@@ -17,10 +17,7 @@
 <br/>
 
 ## 최종 결과물
-![image](https://user-images.githubusercontent.com/81481259/189610961-41ba1824-2332-48bd-98f6-45798a8c7c2f.png)
-`TODO`: images 파일에 올리고 연결해줘야 함
-
-<br/>
+<p align="center"><img src="docs/images/figure_final.jpg" width="800" height="450"></p>
 
 # 목차
 
@@ -58,6 +55,7 @@
 
 <a name="step1"></a>
 ## 1️⃣ 피사체 동영상 촬영하기
+`TODO`: images 파일에 올리고 연결해줘야 함
 <table>
 <thead align="center">
   <tr>
@@ -66,10 +64,195 @@
 </thead>
 <tbody align="center">
   <tr>
-    <td><img src=https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/non_forward_facing.gif></td>
+    <td><img src=...></td>
   </tr>
   <tr>
     <td>이 프로젝트에서 사용한 방법</td>
   </tr>
 </tbody>
 </table>
+
+<a name="step2"></a>
+## 2️⃣ 비디오로부터 이미지 샘플링하기
+`TODO`: images 파일에 올리고 연결해줘야 함
+<p style="text-align:center;">
+<a href="https://colab.research.google.com/github/ProtossDragoon/PlankHyundong/blob/main/notebooks/sampling_colab.ipynb">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+</a></p>
+
+<p align="center"><img src="https://github.com/ProtossDragoon/PlankHyundong/blob/7fe9587f7c9c2752f5898dd41df171b86fe962d6/docs/images/video_sampling.gif" width="400" height="225"></p>
+
+스크립트를 이용하여 촬영한 비디오를 이미지로 등간격 샘플링합니다.
+
+- ✅ 카메라 트래젝토리가 길다면 더 잘게 잘라 주는 것이 좋습니다.
+- ❗ 카메라 트래젝토리가 짧고 렌즈를 열어두는 시간이 짧은 경우, 동영상으로부터 이미지를 너무 잘게 샘플링한다면 성능에 악영향을 미칠 수 있습니다.
+
+<a name="step3"></a>
+## 3️⃣ 이미지에 대한 카메라 포즈 구하기
+`TODO`: 이미지 추가 및 images 파일에 올리고 연결해줘야 함
+
+<p style="text-align:center;">
+<a href="https://colab.research.google.com/github/ProtossDragoon/PlankHyundong/blob/main/notebooks/colmap_colab.ipynb">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+</a></p>
+
+**NOTE:** 반드시 GPU 런타임을 사용해야 합니다.
+
+NeRF 의 입력은 (이미지, 카메라포즈) 의 집합입니다. 커스텀 이미지로부터 이미지 각각에 해당하는 카메라 포즈를 계산하기 위해 [COLMAP](https://github.com/colmap/colmap)을 기반으로 동작하는 [LLFF](https://github.com/Fyusion/LLFF) 저자의 스크립트를 사용합니다. 
+
+<p align="center"><img src="https://github.com/ProtossDragoon/PlankHyundong/blob/85638bda940f10d00839e656b4f9f487f9742aa8/docs/images/camera_poses.png" width="800" height="450"></p>
+
+실행이 완료되면 데이터셋 폴더 안에 NeRF 모델을 실행시키는 데 필요한 `poses_bounds.npy` 파일이 생성됩니다.
+
+<a name="step4"></a>
+## 4️⃣ NeRF 모델 학습시키기
+
+<p style="text-align:center;">
+<a href="https://colab.research.google.com/github/ProtossDragoon/PlankHyundong/blob/main/notebooks/nerf_wandb_colab.ipynb">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+</a></p>
+
+**NOTE:** 반드시 GPU 런타임을 사용해야 합니다.
+
+### 학습 옵션
+
+|       옵션      | 역할 |
+|:---------------:|:---:|
+| `--no_ndc`, `--spherify`, `--lindisp` | forward facing scene 에서는 필요하지 않지만, 360 scene 에 대해서는 반드시 사용해야 하는 플래그입니다.|
+
+### 결과
+<table>
+<thead align="center">
+  <tr>
+    <th>RGB</th>
+    <th>RGB_still</th>
+    <th>disparity</th>
+  </tr>
+</thead>
+<tbody align="center">
+  <tr>
+    <td><img src="https://github.com/ProtossDragoon/PlankHyundong/blob/7fe9587f7c9c2752f5898dd41df171b86fe962d6/docs/images/nerf_rgb.gif"></td>
+    <td><img src="https://github.com/ProtossDragoon/PlankHyundong/blob/7fe9587f7c9c2752f5898dd41df171b86fe962d6/docs/images/nerf_rgb_still.gif"></td>
+      <td><img src="https://github.com/ProtossDragoon/PlankHyundong/blob/7fe9587f7c9c2752f5898dd41df171b86fe962d6/docs/images/nerf_disp.gif"></td>
+  </tr>
+</tbody>
+</table>
+
+
+<a name="step5"></a>
+## 5️⃣ NeRF 모델로부터 Mesh 만들고 다듬기
+
+### Mesh 만들기
+
+<p style="text-align:center;">
+<a href="https://colab.research.google.com/github/ProtossDragoon/PlankHyundong/blob/main/notebooks/extract_mesh_colab.ipynb">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+</a></p>
+
+**NOTE:** 반드시 GPU 런타임을 사용해야 합니다.
+
+NeRF 모델로 학습시킨 학습시킨 모델을 로드한 뒤, `PyMCubes` 패키지를 통해 표면(iso-surface)을 추출하고 그 결과물인 `3d.obj` 파일을  저장하는 단계입니다. 이 노트북의 출처는 [NeRF 공식 저장소](https://github.com/bmild/nerf/blob/master/extract_mesh.ipynb)입니다.
+ 
+- 위 노트북에서는 학습된 NeRF 모델의 3D 표현(implicit representation)을 시각화 하기 위해 `pyrender` 을 이용해 `turntable.mp4` 영상을 생성합니다.
+
+<p align="center"><img src="https://github.com/ProtossDragoon/PlankHyundong/blob/7fe9587f7c9c2752f5898dd41df171b86fe962d6/docs/images/meshed_representation.gif" width="400" height="225"></p>
+
+### Mesh 다듬기
+<p align="center"><img src="https://github.com/ProtossDragoon/PlankHyundong/blob/7fe9587f7c9c2752f5898dd41df171b86fe962d6/docs/images/trim_mesh_case_without_background.jpg" width="400" height="225"></p>
+
+데이터를 직접 수집하였기 때문에 추출한 mesh에 노이즈가 많아, 3d 프린터로 출력 전 blender로 직접 노이즈를 제거해주었다.
+
+<br>
+
+<a name="step6"></a>
+## 6️⃣ 피규어 인쇄하기
+<table>
+<thead align="center">
+  <tr>
+    <th>슬라이서 소프트웨어</th>
+    <th>출력 중인 모습</th>
+  </tr>
+</thead>
+<tbody align="center">
+  <tr>
+    <td><img src="https://github.com/ProtossDragoon/PlankHyundong/blob/28540b734f3da1462d97e85ab46dcc206ad1ff70/docs/images/slicer_sw.gif" width="480" width="640" height="360"></td>
+    <td><img src="https://github.com/ProtossDragoon/PlankHyundong/blob/28540b734f3da1462d97e85ab46dcc206ad1ff70/docs/images/printing_figure.gif" width="270" height="360"></td>
+  </tr>
+</tbody>
+</table>
+
+
+### 인쇄된 피규어 후가공하기
+<table>
+<thead align="center">
+  <tr>
+    <th></th>
+    <th>before</th>
+    <th>after</th>
+  </tr>
+</thead>
+<tbody align="center">
+  <tr>
+    <td>라프트 제거</td>
+    <td><img width="300" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/figure_postprocessing_before.jpg"></td>
+    <td><img width="300" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/figure_postprocessing_ongoing.jpg"></td>
+  </tr>
+</tbody>
+</table>
+
+<br>
+
+<a name="env"></a>
+# 환경
+
+- **Google COLAB**
+    - 플랭크현동팀의 모든 실험은 Google COLAB Pro, Google COLAB Pro+ 에서 진행되었습니다.
+    - 환경에 대한 걱정 없이 실행할 수 있도록 이미 **의존성이 모두 스크립트로 정의**되어 있는 [플랭크현동팀의 노트북들](https://github.com/ProtossDragoon/PlankHyundong/tree/main/notebooks)이 준비되어 있습니다.
+- **Weight and Bias ([wandb](https://wandb.ai/))**
+- **Local Light Field Fusion ([LLFF](https://github.com/Fyusion/LLFF)), [COLMAP](https://github.com/colmap/colmap)**
+- **Tensorflow 1.15**
+    - [NeRF 공식 저장소](https://github.com/bmild/nerf)와 [NeRF 공식 저장소를 수정하여 wandb 가 자동으로 연결되도록 수정한 저장소](https://github.com/ProtossDragoon/nerf-wandb)는 TensorFlow 1.15 를 사용합니다.
+
+<table>
+<thead align="center">
+  <tr>
+    <th>Google COLAB</th>
+    <th>Wandb</th>
+    <th>Tensorflow</th>
+  </tr>
+</thead>
+<tbody align="center">
+  <tr>
+    <td><img width="200" src="https://github.com/ProtossDragoon/PlankHyundong/blob/0337fbe609c45dbc6a7fbefdd9ae87408d699468/docs/images/colab.png"></td>
+    <td><img width="200" src="https://github.com/ProtossDragoon/PlankHyundong/blob/0337fbe609c45dbc6a7fbefdd9ae87408d699468/docs/images/wandb.png"></td>
+    <td><img width="200" src="https://github.com/ProtossDragoon/PlankHyundong/blob/0337fbe609c45dbc6a7fbefdd9ae87408d699468/docs/images/tensorflow.png"></td>
+  </tr>
+</tbody>
+</table>
+
+<table>
+<thead align="center">
+  <tr>
+    <th>Blender</th>
+    <th>Sindoh</th>
+    <th>3DWOX1/DP203</th>
+  </tr>
+</thead>
+<tbody align="center">
+  <tr>
+    <td><img width="200" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/logo_blender.png"></td>
+    <td><img width="200" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/logo_sindoh.png"></td>
+    <td><img width="200" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/printer_3DWOX1.png"></td>
+  </tr>
+</tbody>
+</table>
+
+
+<a name="team"></a>
+# 팀
+
+- [세종대학교 인공지능 동아리 SAI](https://github.com/sju-coml/SAI)
+- [프로젝트 칸반](https://www.notion.so/janghoo/21fcf2a58bd0412d98750e92156b728b?v=fb1550801bd94e748c1f13bc2c12c51b)
+
+![logo-color.png](https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/logo_background.png )
+
