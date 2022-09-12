@@ -52,16 +52,25 @@
 # 목차
 
 - [빠른 시작](#quickstart)
-- [구성요소별로 시작하기](#start)
+- [구성요소별 디테일](#steps)
     - [피사체 동영상 촬영하기](#step1)
+      - [촬영 권장사항](#step1-1)
+      - [촬영 주의사항](#step1-2)
+      - [촬영 권장 및 주의사항 관련 실험](#step1-experiment)
     - [비디오로부터 이미지 샘플링하기](#step2)
     - [이미지에 대한 카메라 포즈 구하기](#step3)
     - [NeRF 모델 학습시키기](#step4)
+      - [학습 옵션](#step4-1)
+        - [학습 옵션 관련 실험](#step4-1-experiment)
     - [NeRF 모델로부터 Mesh 만들고 다듬기](#step5)
-    - [피규어 인쇄하기](#step6)
-    - [인쇄된 피규어 후가공하기](#step7)
-- [실험 및 평가](#experiment)
-    - [데이터셋 및 NeRF 모델 파라미터 실험](#dataandnerf)
+      - [Mesh 만들기](#step5-1)
+        - [3D 프린터 옵션 실험](#step5-1-experiment)
+      - [Mesh 다듬기](#step5-2)
+    - [피규어 인쇄 및 후가공하기](#step6)
+      - [피규어 인쇄하기](#step6-1)
+        - [3D 프린터 옵션 실험](#step6-1-experiment)
+      - [인쇄된 피규어 후가공하기](#step6-2)
+- [평가](#evaluation)
     - [Mesh Renderer 파라미터 실험](#renderer)
     - [3D 프린터 옵션 실험](#printer)
 - [환경](#env)
@@ -73,8 +82,8 @@
 
 `TODO`
 
-<a name="start"></a>
-# 구성요소별로 시작하기
+<a name="steps"></a>
+# 구성요소별 디테일
 
 ![파이프라인](https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/pipeline.png )
 
@@ -131,6 +140,7 @@
 <a name="step1"></a>
 ## 피사체 동영상 촬영하기
 
+<a name="step1-1"></a>
 ### 촬영 권장사항
 
 <table>
@@ -158,6 +168,7 @@
 - ✅ 각 각도에 대한 이미지를 동일하게 수집하기 위해 일정한 속도로 돌며 촬영합니다.
 - ✅ NeRF 의 설계에는 동적인 물체가 고려되지 않았으므로 피사체의 움직임을 최소화합니다.
 
+<a name="step1-2"></a>
 ### 촬영 주의사항
 
 <table>
@@ -179,6 +190,13 @@
     - 실험을 통해 피사체 주변에 차가 많을 때 결과가 좋지 않음을 확인했습니다.
 - ❗ 피사체를 제외한 주변의 움직이는 사물이나 그림자 등이 등장하지 않도록 주의합니다.
     - 실험을 통해 촬영자의 팔이 나온 데이터를 제거했을 때 성능이 매우 향상됨을 확인했습니다.
+
+<a name="step1-experiment"></a>
+### 촬영 권장 및 주의사항 관련 실험
+
+![wandb_experiment](https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/wandb_experiment.gif)
+
+이와 관련된 실험으로부터 얻은 인사이트는 [wandb 리포트](https://wandb.ai/plank-hyundong/plank-hyundong/reports/Hyperparameter-Experiment-Ablation-Study--VmlldzoyNDAzMDYz)에서 모두 확인할 수 있습니다.
 
 <a name="step2"></a>
 ## 비디오로부터 이미지 샘플링하기
@@ -220,6 +238,7 @@ NeRF 의 입력은 (이미지, 카메라포즈) 의 집합입니다. 커스텀 �
 
 **NOTE:** 반드시 GPU 런타임을 사용해야 합니다.
 
+<a name="step4-1"></a>
 ### 학습 옵션
 
 |       옵션       |  파라미터 | 역할 |
@@ -228,9 +247,17 @@ NeRF 의 입력은 (이미지, 카메라포즈) 의 집합입니다. 커스텀 �
 | `--wandbentity`                       | wandb 팀명 또는 유저명 | 본 프로젝트에서는 필요한 Metric, 평가지표들을 시각화하기 위하여 실험 관리 도구인 wandb를 사용합니다.|
 | `--no_ndc`, `--spherify`, `--lindisp` |                    | forward facing scene 에서는 필요하지 않지만, 360 scene 에 대해서는 반드시 사용해야 하는 플래그입니다.|
 
+<a name="step4-1-experiment"></a>
+#### 학습 옵션 관련 실험
+
+![wandb_experiment](https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/wandb_experiment.gif)
+
+이와 관련된 실험으로부터 얻은 인사이트는 [wandb 리포트](https://wandb.ai/plank-hyundong/plank-hyundong/reports/Hyperparameter-Experiment-Ablation-Study--VmlldzoyNDAzMDYz)에서 모두 확인할 수 있습니다.
+
 <a name="step5"></a>
 ## NeRF 모델로부터 Mesh 만들고 다듬기
 
+<a name="step5-1"></a>
 ### Mesh 만들기
 
 <p style="text-align:center;">
@@ -246,6 +273,7 @@ NeRF 모델로 학습시킨 학습시킨 모델을 로드한 뒤, `PyMCubes` 패
 - `trimesh` 가 적용된 3D 표현을 실시간으로 미리보기할 수 있습니다. 
 - `N` 과 `threshold` 변수값 조절을 통해 추출한 결과물의 퀄리티 변화를 확인할 수 있습니다.
 
+<a name="step5-2"></a>
 ### Mesh 다듬기
 
 우리가 관심있는 피사체 외 만들어진 3D 표현 잡음들을 제거하기 위해 수작업이 필요합니다.
@@ -270,7 +298,10 @@ NeRF 모델로 학습시킨 학습시킨 모델을 로드한 뒤, `PyMCubes` 패
 </table>
 
 <a name="step6"></a>
-## 피규어 인쇄하기
+## 피규어 인쇄 및 후가공하기
+
+<a name="step6-1"></a>
+### 피규어 인쇄하기
 
 `.obj` 파일을 타깃 프린터가 호환되는 슬라이서 프로그램에 업로드하여 출력하는 단계입니다. 예를 들어, 사용할 프린터가 3DWOX(DP203) 인 경우, 대표적으로 사용할 수 있는 슬라이서 프로그램은 Sindoh 슬라이서입니다.
 
@@ -296,59 +327,22 @@ NeRF 모델로 학습시킨 학습시킨 모델을 로드한 뒤, `PyMCubes` 패
 </tbody>
 </table>
 
-<a name="step7"></a>
-## 인쇄된 피규어 후가공하기
-
-높은 퀄리티의 결과물을 얻기 위해서는 3D 프린팅 결과물을 후가공할 필요가 있습니다. 기본적으로는 서포트(혹은 라프트)등 구조물과 거미줄 등 미관을 해치는 요소들을 제거합니다. 사포질과 도색을 추가적으로 진행하기도 합니다.
-
-<table>
-<thead align="center">
-  <tr>
-    <th></th>
-    <th>before</th>
-    <th>after</th>
-  </tr>
-</thead>
-<tbody align="center">
-  <tr>
-    <td>라프트 제거</td>
-    <td><img width="300" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/figure_postprocessing_before.jpg"></td>
-    <td><img width="300" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/figure_postprocessing_ongoing.jpg"></td>
-  </tr>
-</tbody>
-</table>
-
-<a name="experiment"></a>
-# 실험 및 평가
-
-<a name="dataandnerf"></a>
-## 데이터셋 및 NeRF 모델 파라미터 실험
-
-![wandb_experiment](https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/wandb_experiment.gif)
-
-- 다양한 시행착오들과 인사이트는 [wandb 리포트](https://wandb.ai/plank-hyundong/plank-hyundong/reports/Hyperparameter-Experiment-Ablation-Study--VmlldzoyNDAzMDYz)에서 모두 확인할 수 있다.
-
-<a name="renderer"></a>
-## Mesh Renderer 파라미터 실험
-
-`TODO`
-
-<a name="printer"></a>
-## 3D 프린터 옵션 실험
+<a name="step6-1-experiment"></a>
+### 3D 프린터 옵션 실험
 
 - 3D 프린터의 다양한 옵션에 따라 결과물의 퀄리티가 달라집니다.
 - 3D 프린터의 결과물의 퀄리티에 가장 많은 영향을 미치는 요소는 레이어 높이, 출력 속도입니다.
 
 |   |       옵션       | 레이어 높이 | 출력 속도 | 소요된 출력시간 |
 |:--:|:---------------:|:------:|:--------:|:----------:|
-| 1️⃣ | 데이터 정제           | 0.1mm |  20mm/s | 17h |
-| 2️⃣ | 데이터 정제           | 0.1mm |  40mm/s | 14h |
-| 3️⃣ | 데이터 정제           | 0.2mm |  20mm/s | 9h  |
-| 4️⃣ | 데이터 정제           | 0.2mm |  40mm/s | 7h  |
-| 5️⃣ | 데이터 정제 + 누끼 제거 | 0.1mm |  20mm/s | 4h  |
-| 6️⃣ | 데이터 정제 + 누끼 제거 | 0.1mm |  40mm/s | 4h  |
-| 7️⃣ | 데이터 정제 + 누끼 제거 | 0.2mm |  20mm/s | 3h  |
-| 8️⃣ | 데이터 정제 + 누끼 제거 | 0.2mm |  40mm/s | 3h  |
+| 1️⃣        | 데이터 정제           | 0.1mm |  20mm/s | 17h |
+| 2️⃣        | 데이터 정제           | 0.1mm |  40mm/s | 14h |
+| 3️⃣        | 데이터 정제           | 0.2mm |  20mm/s | 9h  |
+| 4️⃣        | 데이터 정제           | 0.2mm |  40mm/s | 7h  |
+| 5️⃣ (best) | 데이터 정제 + 누끼 제거 | 0.1mm |  20mm/s | 4h  |
+| 6️⃣        | 데이터 정제 + 누끼 제거 | 0.1mm |  40mm/s | 4h  |
+| 7️⃣        | 데이터 정제 + 누끼 제거 | 0.2mm |  20mm/s | 3h  |
+| 8️⃣        | 데이터 정제 + 누끼 제거 | 0.2mm |  40mm/s | 3h  |
 
 <table style="table-layout: fixed; width: 100%;">
 <thead align="center" >
@@ -376,6 +370,45 @@ NeRF 모델로 학습시킨 학습시킨 모델을 로드한 뒤, `PyMCubes` 패
   </tr>
 </tbody>
 </table>
+
+<table style="table-layout: fixed; width: 100%;">
+<thead align="center" >
+  <tr>
+    <th> 결과물 </th>
+  </tr>
+</thead>
+<tbody align="center">
+</tbody>
+
+<a name="step6-2"></a>
+### 인쇄된 피규어 후가공하기
+
+높은 퀄리티의 결과물을 얻기 위해서는 3D 프린팅 결과물을 후가공할 필요가 있습니다. 기본적으로는 서포트(혹은 라프트)등 구조물과 거미줄 등 미관을 해치는 요소들을 제거합니다. 사포질과 도색을 추가적으로 진행하기도 합니다.
+
+<table>
+<thead align="center">
+  <tr>
+    <th></th>
+    <th>before</th>
+    <th>after</th>
+  </tr>
+</thead>
+<tbody align="center">
+  <tr>
+    <td>라프트 제거</td>
+    <td><img width="300" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/figure_postprocessing_before.jpg"></td>
+    <td><img width="300" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/figure_postprocessing_ongoing.jpg"></td>
+  </tr>
+</tbody>
+</table>
+
+<a name="evaluation"></a>
+# 평가
+
+<a name="renderer"></a>
+## Mesh Renderer 파라미터 실험
+
+`TODO`
 
 <a name="env"></a>
 # 환경
