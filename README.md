@@ -418,6 +418,36 @@ NeRF 모델로 학습시킨 학습시킨 모델을 로드한 뒤, `PyMCubes` 패
 <a name="evaluation"></a>
 # 평가
 
+- [구글 폼](https://docs.google.com/forms/d/e/1FAIpQLScj3vhJWWyFJM4KYGAUbpEiJMA9KHdTYpU5Q12IAYlCcFXeOg/viewform)으로 정성 평가를 진행했습니다.
+- 목표치는 Accuracy 50% 이상이었습니다.
+
+<table>
+<thead align="center">
+  <tr>
+    <th></th>
+    <th>Q1 - 인물 맞추기</th>
+    <th>Q2 - 착의 맞추기</th>
+  </tr>
+</thead>
+<tbody align="center">
+  <tr>
+    <td></td>
+    <td><img width="300" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/evaluation_q2_1"></td>
+    <td><img width="300" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/evaluation_q1_1"></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><img width="300" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/evaluation_q2_2"></td>
+    <td><img width="300" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/evaluation_q1_2"></td>
+  </tr>
+  <tr>
+    <td>Accuracy</td>
+    <td>47%</td>
+    <td>54%</td>
+  </tr>
+</tbody>
+</table>
+
 <a name="todo"></a>
 # 도와주세요
 
