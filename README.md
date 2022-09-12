@@ -72,9 +72,8 @@
 - [평가](#evaluation)
     - [Mesh Renderer 파라미터 실험](#renderer)
     - [3D 프린터 옵션 실험](#printer)
-- [환경](#env)
 - [도와주세요](#todo)
-- [팀](#team)
+- [팀과 메이커로그](#team)
 
 <a name="steps"></a>
 # 구성요소별 디테일
@@ -419,34 +418,6 @@ NeRF 모델로 학습시킨 학습시킨 모델을 로드한 뒤, `PyMCubes` 패
 <a name="evaluation"></a>
 # 평가
 
-<a name="env"></a>
-# 환경
-
-- **Google COLAB**
-    - 플랭크현동팀의 모든 실험은 Google COLAB Pro, Google COLAB Pro+ 에서 진행되었습니다.
-    - 환경에 대한 걱정 없이 실행할 수 있도록 이미 **의존성이 모두 스크립트로 정의**되어 있는 [플랭크현동팀의 노트북들](https://github.com/ProtossDragoon/PlankHyundong/tree/main/notebooks)이 준비되어 있습니다.
-- **Weight and Bias ([wandb](https://wandb.ai/))**
-- **Local Light Field Fusion ([LLFF](https://github.com/Fyusion/LLFF)), [COLMAP](https://github.com/colmap/colmap)**
-- **Tensorflow 1.15**
-    - [NeRF 공식 저장소](https://github.com/bmild/nerf)와 [NeRF 공식 저장소를 수정하여 wandb 가 자동으로 연결되도록 수정한 저장소](https://github.com/ProtossDragoon/nerf-wandb)는 TensorFlow 1.15 를 사용합니다.
-
-<table>
-<thead align="center">
-  <tr>
-    <th>Blender</th>
-    <th>Sindoh</th>
-    <th>3DWOX1/DP203</th>
-  </tr>
-</thead>
-<tbody align="center">
-  <tr>
-    <td><img width="200" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/logo_blender.png"></td>
-    <td><img width="200" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/logo_sindoh.png"></td>
-    <td><img width="200" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/printer_3DWOX1.png"></td>
-  </tr>
-</tbody>
-</table>
-
 <a name="todo"></a>
 # 도와주세요
 
@@ -455,7 +426,7 @@ NeRF 모델로 학습시킨 학습시킨 모델을 로드한 뒤, `PyMCubes` 패
 - 파이프라인의 요소를 각각 별도의 노트북으로 분리한 상태로 관리하는 것이 아니라 파이프라인 요소들 각각을 명확히 이해하고 온전하게 연결해야 합니다.
 
 <a name="team"></a>
-# 팀
+# 팀과 메이커로그
 
 - [세종대학교 인공지능 동아리 SAI](https://github.com/sju-coml/SAI)
 - [프로젝트 칸반](https://www.notion.so/janghoo/21fcf2a58bd0412d98750e92156b728b?v=fb1550801bd94e748c1f13bc2c12c51b)
