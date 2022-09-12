@@ -64,8 +64,6 @@
         - [3D 프린터 옵션 실험](#step6-1-experiment)
       - [인쇄된 피규어 후가공하기](#step6-2)
 - [평가](#evaluation)
-    - [육안평가](#evaluation-1)
-    - [설문조사](#evaluation-2)
 - [도와주세요](#todo)
 - [팀과 메이커로그](#team)
 
@@ -412,15 +410,9 @@ NeRF 모델로 학습시킨 학습시킨 모델을 로드한 뒤, `PyMCubes` 패
 <a name="evaluation"></a>
 # 평가
 
-<a name="evaluation-1"></a>
-## 육안평가
-
-`TODO`
-
-<a name="evaluation-2"></a>
-## 설문평가
-
-- [구글 폼](https://docs.google.com/forms/d/e/1FAIpQLScj3vhJWWyFJM4KYGAUbpEiJMA9KHdTYpU5Q12IAYlCcFXeOg/viewform)으로 정성 평가를 진행했습니다.
+- loss, PSNR 등의 정량적 metric 은 ‘3d Reconstruction 이 정말정말 잘 되었는가?' 를 판단할 수 없다고 생각했습니다.
+- 이를 보완하기 위한 정성적인 메트릭을 만들 필요가 있었습니다.
+- [구글 폼](https://docs.google.com/forms/d/e/1FAIpQLScj3vhJWWyFJM4KYGAUbpEiJMA9KHdTYpU5Q12IAYlCcFXeOg/viewform)으로 정량 평가를 모방했습니다.
 - 목표치는 Accuracy 50% 이상이었습니다.
 
 <table>
