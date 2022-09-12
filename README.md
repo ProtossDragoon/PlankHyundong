@@ -256,8 +256,8 @@ NeRF 모델로 학습시킨 학습시킨 모델을 로드한 뒤, `PyMCubes` 패
 </thead>
 <tbody align="center">
   <tr>
-    <td><img src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/trim_mesh.png" alt=""></td>
-    <td><img src="" alt=""></td>
+    <td><img width="300" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/trim_mesh.png" alt=""></td>
+    <td><img width="300" src="" alt=""></td>
   </tr>
   <tr>
     <td>바닐라 NeRF 는 피사체와 배경을 분리하지 못합니다. 따라서 NeRF 모델을 이용해 생성한 3D 표현은 피사체 주변의 바닥, 근처 장애물 등을 모두 만들어넣습니다. 따라서 현실에서 직접 취득한 데이터를 그대로 사용하는 경우 결과물의 상태가 좋지 않을 가능성이 높습니다.</td>
@@ -296,7 +296,24 @@ NeRF 모델로 학습시킨 학습시킨 모델을 로드한 뒤, `PyMCubes` 패
 <a name="step7"></a>
 ## 인쇄된 피규어 후가공하기
 
-`TODO`
+높은 퀄리티의 결과물을 얻기 위해서는 3D 프린팅 결과물을 후가공할 필요가 있습니다. 기본적으로는 서포트(혹은 라프트)등 구조물과 거미줄 등 미관을 해치는 요소들을 제거합니다. 사포질과 도색을 추가적으로 진행하기도 합니다.
+
+<table>
+<thead align="center">
+  <tr>
+    <th></th>
+    <th>before</th>
+    <th>after</th>
+  </tr>
+</thead>
+<tbody align="center">
+  <tr>
+    <td>라프트 제거</td>
+    <td><img width="300" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/figure_postprocessing_before.jpg"></td>
+    <td><img width="300" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/figure_postprocessing_ongoing.jpg"></td>
+  </tr>
+</tbody>
+</table>
 
 <a name="experiment"></a>
 # 실험 및 평가
