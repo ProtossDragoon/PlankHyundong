@@ -14,7 +14,7 @@
 
 헬스보이 현동이가 알려주는 정확한 플랭크 자세! **헬창이 되고 싶은 사람들은 그의 자세를 360도로 요리조리 살펴보고 자신과 비교해보면서 운동해보는건 어떨까?** 🏋🏻
 
-## 최종 결과물
+## 결과물
 
 <table>
 <thead align="center">
@@ -26,14 +26,14 @@
 </thead>
 <tbody align="center">
   <tr>
-    <th><img width="220" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/hyundong360_snapshot.jpg"></td></th>
-    <td><img width="220" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/figure_middle_collage.png"></td>
-    <td><img width="220" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/figure_final_collage.jpg"></td>
+    <th><img width="250" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/hyundong360_snapshot.jpg"></td></th>
+    <td><img width="250" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/figure_middle_collage.png"></td>
+    <td><img width="250" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/figure_final_collage.jpg"></td>
   </tr>
   <tr>
-    <th><img width="220" src="https://github.com/ProtossDragoon/PlankHyundong/blob/c466d902d2ec4d276452b78fdf258d2e73a0da13/docs/images/collecting_video.gif"></th>
-    <td><img width="220" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/hyundong360.gif"></td>
-    <td><img width="220" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/hyundong360_removebg.gif"></td>
+    <th><img width="250" src="https://github.com/ProtossDragoon/PlankHyundong/blob/c466d902d2ec4d276452b78fdf258d2e73a0da13/docs/images/collecting_video.gif"></th>
+    <td><img width="250" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/hyundong360.gif"></td>
+    <td><img width="250" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/hyundong360_removebg.gif"></td>
   </tr>
   <tr>
     <td></td>
