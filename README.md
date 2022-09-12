@@ -26,14 +26,14 @@
 </thead>
 <tbody align="center">
   <tr>
-    <th><img width="300" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/hyundong360_snapshot.jpg"></td></th>
-    <td><img width="300" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/figure_middle_collage.png"></td>
-    <td><img width="300" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/figure_final_collage.jpg"></td>
+    <th><img width="220" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/hyundong360_snapshot.jpg"></td></th>
+    <td><img width="220" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/figure_middle_collage.png"></td>
+    <td><img width="220" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/figure_final_collage.jpg"></td>
   </tr>
   <tr>
     <th></th>
-    <td><img width="300" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/hyundong360.gif"></td>
-    <td><img width="300" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/hyundong360_removebg.gif"></td>
+    <td><img width="220" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/hyundong360.gif"></td>
+    <td><img width="220" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/hyundong360_removebg.gif"></td>
   </tr>
   <tr>
     <td></td>
