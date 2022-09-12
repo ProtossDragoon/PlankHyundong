@@ -331,6 +331,7 @@ NeRF 모델로 학습시킨 학습시킨 모델을 로드한 뒤, `PyMCubes` 패
 
 |   |       옵션       | 레이어 높이 | 출력 속도 | 소요된 출력시간 | 정성평가 |
 |:--:|:---------------:|:------:|:--------:|:----------:|:----:|
+| 0️⃣  | 2022년 8월 9일 중간 결과물 | ???  |  ???  | ??  | worst |
 | 1️⃣  | 데이터 정제           | 0.1mm |  20mm/s | 4h  | |
 | 2️⃣  | 데이터 정제           | 0.1mm |  40mm/s | 4h  | |
 | 3️⃣  | 데이터 정제           | 0.2mm |  20mm/s | 3h  | |
@@ -339,6 +340,21 @@ NeRF 모델로 학습시킨 학습시킨 모델을 로드한 뒤, `PyMCubes` 패
 | 6️⃣  | 데이터 정제 + 누끼 제거 | 0.1mm |  40mm/s | 14h | |
 | 7️⃣  | 데이터 정제 + 누끼 제거 | 0.2mm |  20mm/s | 9h  | |
 | 8️⃣  | 데이터 정제 + 누끼 제거 | 0.2mm |  40mm/s | 7h  | |
+
+> 누끼를 제거한 데이터 셋은 배경이 제거되면서 PSNR과 loss 에 영향을 미치기 때문에 정량적인 평가가 불가능합니다. 단순한 시각화만으로는 두 결과물에 대한 정성적인 평가가 어려웠습니다. 따라서 두 경우 모두에 대해 실제 피규어를 인쇄해본 뒤 이들을 비교했습니다.
+
+<table style="table-layout: fixed; width: 100%;">
+<thead align="center" >
+  <tr>
+    <th> 0️⃣ 2022년 8월 9일 중간 결과물 </th>
+  </tr>
+</thead>
+<tbody align="center">
+  <tr>
+    <td><img width="300" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/figure_middle_collage.png"></td>
+  </tr>
+</tbody>
+</table>
 
 <table style="table-layout: fixed; width: 100%;">
 <thead align="center" >
