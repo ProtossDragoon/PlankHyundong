@@ -350,47 +350,25 @@ NeRF 모델로 학습시킨 학습시킨 모델을 로드한 뒤, `PyMCubes` 패
 <table style="table-layout: fixed; width: 100%;">
 <thead align="center" >
   <tr>
-    <th>정제된 데이터</th>
-    <th>레이어 높이 0.1mm</th>
-    <th>레이어 높이 0.2mm</th>
+    <th> 1️⃣ 2️⃣ 3️⃣ 4️⃣ </th>
+    <th> 5️⃣ 6️⃣ 7️⃣ 8️⃣ </th>
   </tr>
 </thead>
 <tbody align="center">
   <tr>
-    <td>출력 속도 20mm/s</td>
-    <td><img width="300" alt="1️⃣" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/result_cleanup_01_20.jpg"></td>
-    <td><img width="300" alt="3️⃣" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/result_cleanup_02_20.jpg"></td>
+    <td><img width="300" alt="1234_ff" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/result_1234_ff_.jpg"></td>
+    <td><img width="300" alt="5678_ff" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/result_5678_ff_.jpg"></td>
   </tr>
+  <tr>
+    <td><img width="300" alt="1234_back" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/result_1234_back_.jpg"></td>
+    <td><img width="300" alt="5678_back" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/result_5678_back_.jpg"></td>
   </tr>
-    <td>출력 속도 40mm/s</td>
-    <td><img width="300" alt="2️⃣" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/result_cleanup_01_40.jpg"></td>
-    <td><img width="300" alt="4️⃣" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/result_cleanup_02_40.jpg"></td>
+  <tr>
+    <td><img width="300" alt="1234_side" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/result_1234_side_.jpg"></td>
+    <td><img width="300" alt="5678_side" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/result_5678_side_.jpg"></td>
   </tr>
 </tbody>
 </table>
-
-<table style="table-layout: fixed; width: 100%;">
-<thead align="center" >
-  <tr>
-    <th>정제 + 누끼가 제거된</th>
-    <th>레이어 높이 0.1mm</th>
-    <th>레이어 높이 0.2mm</th>
-  </tr>
-</thead>
-<tbody align="center">
-  <tr>
-    <td>출력 속도 20mm/s</td>
-    <td><img width="300" alt="5️⃣" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/result_background_01_20.jpg"></td>
-    <td><img width="300" alt="7️⃣" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/result_background_02_20.jpg"></td>
-  </tr>
-  </tr>
-    <td>출력 속도 40mm/s</td>
-    <td><img width="300" alt="6️⃣" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/result_background_01_40.jpg"></td>
-    <td><img width="300" alt="8️⃣" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/result_background_02_40.jpg"></td>
-  </tr>
-</tbody>
-</table>
-
 
 <a name="env"></a>
 # 환경
