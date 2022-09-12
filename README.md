@@ -72,7 +72,7 @@
 </tbody>
 </table>
 
-촬영 권장사항과 주의사항은 <a href="https://github.com/ProtossDragoon/PlankHyundong/tree/docs#step1">다음</a>을 확인해주세요!
+➕ 촬영 권장사항과 주의사항은 <a href="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/GUIDELINE.md#step1">다음</a>을 확인해주세요!
 
 <a name="step2"></a>
 ## 2️⃣ 비디오로부터 이미지 샘플링하기
@@ -89,7 +89,7 @@
 - ✅ 카메라 트래젝토리가 길다면 더 잘게 잘라 주는 것이 좋습니다.
 - ❗ 카메라 트래젝토리가 짧고 렌즈를 열어두는 시간이 짧은 경우, 동영상으로부터 이미지를 너무 잘게 샘플링한다면 성능에 악영향을 미칠 수 있습니다.
 
-자세한 파라미터는 <a href="https://github.com/ProtossDragoon/PlankHyundong/tree/docs#step2">다음</a>을 확인해주세요!
+➕ 자세한 파라미터는 <a href="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/GUIDELINE.md#step2">다음</a>을 확인해주세요!
 
 <a name="step3"></a>
 ## 3️⃣ 이미지에 대한 카메라 포즈 구하기
@@ -107,6 +107,8 @@ NeRF 의 입력은 (이미지, 카메라포즈) 의 집합입니다. 커스텀 �
 <p align="center"><img src="https://github.com/ProtossDragoon/PlankHyundong/blob/85638bda940f10d00839e656b4f9f487f9742aa8/docs/images/camera_poses.png" width="800" height="450"></p>
 
 실행이 완료되면 데이터셋 폴더 안에 NeRF 모델을 실행시키는 데 필요한 `poses_bounds.npy` 파일이 생성됩니다.
+
+➕ LLFF 환경 구축에 어려움이 생기면 <a href="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/GUIDELINE.md#step3">다음</a>을 확인해주세요!
 
 <a name="step4"></a>
 ## 4️⃣ NeRF 모델 학습시키기
@@ -142,6 +144,7 @@ NeRF 의 입력은 (이미지, 카메라포즈) 의 집합입니다. 커스텀 �
 </tbody>
 </table>
 
+➕ wandb 연동과 nerf 파라미터 실험 결과를 알고 싶다면 <a href="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/GUIDELINE.md#step4">다음</a>을 확인해주세요!
 
 <a name="step5"></a>
 ## 5️⃣ NeRF 모델로부터 Mesh 만들고 다듬기
@@ -166,6 +169,9 @@ NeRF 모델로 학습시킨 학습시킨 모델을 로드한 뒤, `PyMCubes` 패
 
 데이터를 직접 수집하였기 때문에 추출한 mesh에 노이즈가 많아, 3d 프린터로 출력 전 blender로 직접 노이즈를 제거해주었다.
 
+
+➕ mesh renderer 파라미터 실험 결과와 데이터에 따른 mesh 다듬기 유의사항을 알고 싶다면, <a href="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/GUIDELINE.md#step5">다음</a>을 확인해주세요!
+
 <br>
 
 <a name="step6"></a>
@@ -185,7 +191,6 @@ NeRF 모델로 학습시킨 학습시킨 모델을 로드한 뒤, `PyMCubes` 패
 </tbody>
 </table>
 
-
 ### 인쇄된 피규어 후가공하기
 <table>
 <thead align="center">
@@ -203,6 +208,8 @@ NeRF 모델로 학습시킨 학습시킨 모델을 로드한 뒤, `PyMCubes` 패
   </tr>
 </tbody>
 </table>
+
+➕ 3D 프린터 옵션 실험 결과를 알고 싶다면 <a href="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/GUIDELINE.md#step6">다음</a>을 확인해주세요!
 
 <br>
 
