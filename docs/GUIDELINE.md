@@ -411,7 +411,7 @@ NeRF 모델로 학습시킨 학습시킨 모델을 로드한 뒤, `PyMCubes` 패
 # 평가
 
 - loss, PSNR 등의 정량적 metric 은 ‘3d Reconstruction 이 정말정말 잘 되었는가?' 를 판단할 수 없다고 생각했습니다.
-- 이를 보완하기 위한 정성적인 메트릭을 만들 필요가 있었습니다.
+- 이를 보완하기 위한 [정성적인 메트릭을 만들 필요](https://www.notion.so/janghoo/3D-e0ca0bd17dd447728b06c236e9abd56f)가 있었습니다.
 - [구글 폼](https://docs.google.com/forms/d/e/1FAIpQLScj3vhJWWyFJM4KYGAUbpEiJMA9KHdTYpU5Q12IAYlCcFXeOg/viewform)으로 정량 평가를 모방했습니다.
 - 목표치는 Accuracy 50% 이상이었습니다.
 
@@ -454,5 +454,7 @@ NeRF 모델로 학습시킨 학습시킨 모델을 로드한 뒤, `PyMCubes` 패
 
 - [세종대학교 인공지능 동아리 SAI](https://github.com/sju-coml/SAI)
 - [프로젝트 칸반](https://www.notion.so/janghoo/21fcf2a58bd0412d98750e92156b728b?v=fb1550801bd94e748c1f13bc2c12c51b)
+- 특히 유의미했던 고민들
+  - [‘3D 화 한다’ 에 대한 명확한 기준 설정하기](https://www.notion.so/janghoo/3D-e0ca0bd17dd447728b06c236e9abd56f)
 
 ![logo-color.png](https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/logo_background.png )
