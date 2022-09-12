@@ -19,16 +19,21 @@
 <table>
 <thead align="center">
   <tr>
-    <th></th>
+    <th>원본</th>
     <th>중간 결과물</th>
     <th>최종 결과물</th>
   </tr>
 </thead>
 <tbody align="center">
   <tr>
-    <td></td>
+    <th><img width="330" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/hyundong360_snapshot"></td></th>
     <td><img width="330" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/figure_middle_collage.png"></td>
     <td><img width="330" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/figure_final_collage.jpg"></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>2022년 8월 9일</td>
+    <td>2022년 8월 24일</td>
   </tr>
 </tbody>
 </table>
