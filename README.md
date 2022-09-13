@@ -5,7 +5,7 @@
 <div align="center">
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FProtossDragoon%2FPlankHyundong&count_bg=%23FFA217&title_bg=%2345FFDE&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com) 
 
@@ -276,6 +276,7 @@ NeRF 모델로 학습시킨 학습시킨 모델을 로드한 뒤, `PyMCubes` 패
       <td align="center"><a href="https://github.com/dusruddl2"><img src="https://avatars.githubusercontent.com/u/81481259?v=4?s=100" width="100px;" alt=""/><br /><sub><b>dusruddl2</b></sub></a><br /><a href="https://github.com/ProtossDragoon/PlankHyundong/commits?author=dusruddl2" title="Documentation">📖</a> <a href="https://github.com/ProtossDragoon/PlankHyundong/commits?author=dusruddl2" title="Code">💻</a></td>
       <td align="center"><a href="https://github.com/Sumyeong-Jang"><img src="https://avatars.githubusercontent.com/u/50583200?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sumyeong-Jang</b></sub></a><br /><a href="https://github.com/ProtossDragoon/PlankHyundong/commits?author=Sumyeong-Jang" title="Documentation">📖</a> <a href="https://github.com/ProtossDragoon/PlankHyundong/commits?author=Sumyeong-Jang" title="Code">💻</a></td>
       <td align="center"><a href="https://davincijang.space/"><img src="https://avatars.githubusercontent.com/u/46595649?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Janghoo Lee</b></sub></a><br /><a href="https://github.com/ProtossDragoon/PlankHyundong/commits?author=ProtossDragoon" title="Documentation">📖</a> <a href="https://github.com/ProtossDragoon/PlankHyundong/commits?author=ProtossDragoon" title="Code">💻</a></td>
+      <td align="center"><a href="https://github.com/cmoweg"><img src="https://avatars.githubusercontent.com/u/59383650?v=4?s=100" width="100px;" alt=""/><br /><sub><b>cmoweg</b></sub></a><br /><a href="https://github.com/ProtossDragoon/PlankHyundong/commits?author=cmoweg" title="Documentation">📖</a> <a href="https://github.com/ProtossDragoon/PlankHyundong/commits?author=cmoweg" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
