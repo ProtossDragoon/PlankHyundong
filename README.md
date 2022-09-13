@@ -1,3 +1,7 @@
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=round-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
+
 ![logo](https://raw.githubusercontent.com/ProtossDragoon/PlankHyundong/944c38802cfe392ed6ed194ccca6a083563add45/docs/images/logo.svg)
 
 <br>
@@ -263,8 +267,22 @@ NeRF 모델로 학습시킨 학습시킨 모델을 로드한 뒤, `PyMCubes` 패
 <a name="team"></a>
 # 팀
 
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="http://dydwo706@gmail.com"><img src="https://avatars.githubusercontent.com/u/55885072?v=4?s=100" width="100px;" alt=""/><br /><sub><b>YongJae Cho</b></sub></a><br /><a href="#maintenance-yyongjae" title="Maintenance">🚧</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+- 이 프로젝트는 [all-contributors 스펙](https://github.com/all-contributors/all-contributors)을 준수합니다. 어떤 기여이든 상관없이 환영합니다!
 - [세종대학교 인공지능 동아리 SAI](https://github.com/sju-coml/SAI)
 - [프로젝트 칸반](https://www.notion.so/janghoo/21fcf2a58bd0412d98750e92156b728b?v=fb1550801bd94e748c1f13bc2c12c51b)
 
 ![logo-color.png](https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/logo_background.png )
-
