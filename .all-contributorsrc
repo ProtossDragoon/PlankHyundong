@@ -13,6 +13,16 @@
       "contributions": [
         "maintenance"
       ]
+    },
+    {
+      "login": "dusruddl2",
+      "name": "dusruddl2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/81481259?v=4",
+      "profile": "https://github.com/dusruddl2",
+      "contributions": [
+        "doc",
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
@@ -20,5 +30,6 @@
   "projectOwner": "ProtossDragoon",
   "repoType": "github",
   "repoHost": "https://github.com",
-  "skipCi": true
+  "skipCi": true,
+  "commitConvention": "angular"
 }
