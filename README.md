@@ -43,10 +43,10 @@
 
 __notebook__ 폴더에 있는 여러 기능의 노트북들을 한번에 실행할 수 있게 __nerf_quick_start.ipynb__ 노트북을 만들었다.
 총 4단계로 이루어져 있으며 구성은 다음과 같다.
-- [2️⃣ 비디오로부터 이미지 샘플링하기](#step1)
-- [3️⃣ 이미지에 대한 카메라 포즈 구하기](#step2)
-- [4️⃣ NeRF 모델 학습시키기](#step3)
-- [5️⃣ NeRF 모델로부터 Mesh 만들고 다듬기](#step4)
+- [1️⃣ Video Sampling : 비디오로부터 이미지 샘플링하기](#step1)
+- [2️⃣ Run COLMAP to get camera pose : 이미지에 대한 카메라 포즈 구하기](#step2)
+- [3️⃣ Run NeRF : NeRF 모델 학습시키기](#step3)
+- [4️⃣ Get Mesh file : NeRF 모델로부터 Mesh 만들고 다듬기](#step4)
 
 <a name="start"></a>
 # 구성요소별로 시작하기
