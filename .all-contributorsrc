@@ -1,0 +1,65 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "yyongjae",
+      "name": "YongJae Cho",
+      "avatar_url": "https://avatars.githubusercontent.com/u/55885072?v=4",
+      "profile": "http://dydwo706@gmail.com",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "dusruddl2",
+      "name": "dusruddl2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/81481259?v=4",
+      "profile": "https://github.com/dusruddl2",
+      "contributions": [
+        "doc",
+        "code"
+      ]
+    },
+    {
+      "login": "Sumyeong-Jang",
+      "name": "Sumyeong-Jang",
+      "avatar_url": "https://avatars.githubusercontent.com/u/50583200?v=4",
+      "profile": "https://github.com/Sumyeong-Jang",
+      "contributions": [
+        "doc",
+        "code"
+      ]
+    },
+    {
+      "login": "ProtossDragoon",
+      "name": "Janghoo Lee",
+      "avatar_url": "https://avatars.githubusercontent.com/u/46595649?v=4",
+      "profile": "https://davincijang.space/",
+      "contributions": [
+        "doc",
+        "code"
+      ]
+    },
+    {
+      "login": "cmoweg",
+      "name": "cmoweg",
+      "avatar_url": "https://avatars.githubusercontent.com/u/59383650?v=4",
+      "profile": "https://github.com/cmoweg",
+      "contributions": [
+        "doc",
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "PlankHyundong",
+  "projectOwner": "ProtossDragoon",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true,
+  "commitConvention": "angular"
+}
