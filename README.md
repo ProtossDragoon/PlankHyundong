@@ -55,6 +55,21 @@
 - [3️⃣ Run NeRF : NeRF 모델 학습시키기](#step3)
 - [4️⃣ Get Mesh file : NeRF 모델로부터 Mesh 만들고 다듬기](#step4)
 
+필요한 데이터는 `data/video/video.MOV`의 경로에 있다.
+해당 데이터로 샘플링을 진행하고 카메라 포즈를 구한다.
+
+노트북을 실행시키기에 앞서 본인의 코랩 환경에 맞게 파일 경로를 설정 해주어야 한다.
+```
+# Set your Google Drive path to our repository
+path = 'content/PlankHyundong'
+
+video_path = f'{path}/data/video/video.MOV'
+img_path = f'{path}/data/images'
+logs_path = f'{path}/data/logs'
+```
+
+시작 위치에 있는 해당 셀에서 `path` 변수의 경로를 환경에 맞게 수정해주면 된다.
+
 <a name="start"></a>
 # 구성요소별로 시작하기
 ![파이프라인](https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/pipeline.png )
