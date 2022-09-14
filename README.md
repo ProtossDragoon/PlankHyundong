@@ -71,7 +71,7 @@ logs_path = f'{path}/data/logs'
 시작 위치에 있는 해당 셀에서 `path` 변수의 경로를 환경에 맞게 수정해주면 된다.
 `data/images` 폴더에는 샘플링한 이미지들이 저장되고, `data/logs` 폴더에는 config.txt, mesh.obj, weight 및 영상 파일 등이 저장된다.
 
-
+그렇기 때문에 해당 노트북과 더불어 
 
 <a name="start"></a>
 # 구성요소별로 시작하기
