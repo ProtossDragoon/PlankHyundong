@@ -185,3 +185,8 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+
+# empty folder
+!logs/.keep
+!images/.keep
