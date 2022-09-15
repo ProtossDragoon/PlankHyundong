@@ -56,8 +56,8 @@
 - [4️⃣ Get Mesh file : NeRF 모델로부터 Mesh 만들고 다듬기](#step4)
 
 필요한 데이터는 `data/video/video.MOV`의 경로에 있다.
-처음 부분에 해당 폴더를 clone받는 셀을 추가해두었다.
-`data/images` 폴더에는 샘플링한 이미지들이 저장되고, `data/logs` 폴더에는 config.txt, mesh.obj, weight 및 영상 파일 등이 저장된다.
+처음 부분에 해당 폴더를 clone받는 셀을 추가해두었다. 
+위의 폴더에 `images`, `logs`폴더를 생성하게 되는데, 각 폴더에는 샘플링한 이미지들과 config, mesh, weight 및 영상 파일 등이 저장된다.
 
 
 <a name="start"></a>
