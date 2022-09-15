@@ -42,7 +42,7 @@
 # 빠른 시작
 
 <p style="text-align:center;">
-<a href="https://colab.research.google.com/github/ProtossDragoon/PlankHyundong/blob/main/nerf_quick_start.ipynb">
+<a href="https://github.com/yyongjae/PlankHyundong/blob/main/nerf_quick_start.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a></p>
 
