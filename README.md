@@ -14,14 +14,28 @@
 <br>
 
 # 플랭크 현동 3D
-헬스보이 현동이가 알려주는 정확한 플랭크 자세!\
-헬창이 되고 싶은 사람들은 **NeRF모델을 이용해 뽑은, 현동이 피규어**를 요리조리 살펴보고 자신과 비교하며 운동해보는건 어떨까? 🏋🏻
+헬스보이 현동이가 알려주는 정확한 플랭크 자세! 헬창이 되고 싶은 사람들은 **NeRF모델을 이용해 뽑은, 현동이 피규어**를 요리조리 살펴보고 자신과 비교하며 운동해보는건 어떨까? 🏋🏻
 
-<br/>
+<br>
 
 ## 최종 결과물
-<p align="center"><img src="docs/images/figure_final.jpg" width="800" height="450"></p>
-본 피규어는 <a href="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/GUIDELINE.md#evaluation">정성평가</a>를 진행해 얻은 결과물입니다.
+
+<table>
+<thead align="center">
+  <tr>
+    <th>최종 결과물 (실제 피규어), <a href="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/GUIDELINE.md#evaluation">결과물 정성평가</a> </th>
+    <th>NeRF 3D 표현</th>
+  </tr>
+</thead>
+<tbody align="center">
+  <tr>
+    <td><img width="350" src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/figure_final.jpg"></td></th>
+    <td><img src="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/hyundong360_removebg.gif"></td>
+  </tr>
+</tbody>
+</table>
+
+<br>
 
 # 목차
 
@@ -32,11 +46,11 @@
     - [3️⃣ 이미지에 대한 카메라 포즈 구하기](#step3)
     - [4️⃣ NeRF 모델 학습시키기](#step4)
     - [5️⃣ NeRF 모델로부터 Mesh 만들고 다듬기](#step5)
-    - [6️⃣ 피규어 인쇄하기](#step6)
+    - [6️⃣ 피규어 인쇄하고 후가공하기](#step6)
 - [환경](#env)
 - [팀](#team)
 
-<br/>
+<br>
 
 <a name="quickstart"></a>
 # 빠른 시작
@@ -46,38 +60,62 @@
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a></p>
 
+```
+PlankHyundong/
+├── nerf_quick_start.ipynb
+├── notebooks
+│   ├── nerf_colab.ipynb
+│   ├── nerf_wandb_colab.ipynb
+│   ├── colmap_colab.ipynb
+│   ├── extract_mesh_colab.ipynb
+│   └── sampling_colab.ipynb
+└── data
+    ├── video
+    │   └── video.MOV
+    ├── (images)
+    │   └── ...
+    └── (logs)
+        └── ...
+```
 
-**notebook** 폴더에 있는 여러 기능의 노트북들을 한번에 실행할 수 있게 **nerf_quick_start.ipynb** 노트북을 만들었다.
-총 4단계로 이루어져 있으며 구성은 다음과 같다.<br>
+- **notebook** 폴더에는 최종 결과물을 만드는 파이프라인에 필요한 노트북이 각각 저장되어 있습니다.
+- 전체 워크플로를 빠르게 훑어볼 수 있도록 **`nerf_quick_start.ipynb`** 이라는 단일 노트북을 제공합니다.
+- **`nerf_quick_start.ipynb`** 은 총 4단계로 이루어져 있으며 구성은 다음과 같습니다.<br>
 
-- [1️⃣ Video Sampling : 비디오로부터 이미지 샘플링하기](#step1)
-- [2️⃣ Run COLMAP to get camera pose : 이미지에 대한 카메라 포즈 구하기](#step2)
-- [3️⃣ Run NeRF : NeRF 모델 학습시키기](#step3)
-- [4️⃣ Get Mesh file : NeRF 모델로부터 Mesh 만들고 다듬기](#step4)
+| step | content |
+|:--:|:-----:|
+| 1️ | [Video Sampling : 비디오로부터 이미지 샘플링하기](#step1) | 
+| 2️ | [Run COLMAP to get camera pose : 이미지에 대한 카메라 포즈 구하기](#step2) |
+| 3️ | [Run NeRF : NeRF 모델 학습시키기](#step3) |
+| 4️ | [Get Mesh file : NeRF 모델로부터 Mesh 만들고 다듬기](#step4) |
 
-필요한 데이터는 `data/video/video.MOV`의 경로에 있다.
-처음 부분에 해당 폴더를 clone받는 셀을 추가해두었다. 
-위의 폴더에 `images`, `logs`라는 하위 폴더를 생성하게 되는데, 각 폴더에는 샘플링한 이미지들과 config, mesh, weight 및 영상 파일 등이 저장된다.
+- 필요한 데이터는 `data/video/video.MOV`의 경로에 있습니다.
+- 처음 부분에 해당 폴더를 clone받는 셀을 추가해두었습니다. 
+- 위 폴더에 `images`, `logs`라는 하위 폴더를 생성합니다. 각 폴더에는 샘플링한 이미지들과 config, mesh, weight 및 영상 파일 등이 저장됩니다.
 
+<br>
 
 <a name="start"></a>
 # 구성요소별로 시작하기
 ![파이프라인](https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/pipeline.png )
-- 1️⃣ RGB Video: 피사체를 가운데에 두고 촬영자는 360도로 회전하며 영상을 수집한다.
-- 2️⃣ N*RGB image: 영상을 샘플링하여 이미지들을 얻는다.
-- 3️⃣ N*camera pose: 카메라 포즈는 NeRF 학습에 필요한 것으로, 이전 단계의 샘플링된 이미지로부터 LLFF를 수행함으로써 얻을 수 있다.
-- 4️⃣ implicit 3D representation: NeRF 모델을 학습시켜 결과물을 얻어낸다.
-- 5️⃣ 3D representation: implicit 3D representation을 시각화하기 위해 Mesh(.obj)를 생성한다.
-- 6️⃣ slicer SW: 3D 프린터로 뽑기 전에 슬라이서에서 최적의 파라미터를 세팅한다.
-- 6️⃣ figure: 3D 프린터로 최종 결과물을 뽑아낸다.
 
-구체적인 내용은 아래에서 확인할 수 있다.
+|    | output | 설명 |
+|:--:|:-----:|:---|
+| 1️⃣ | RGB 비디오 | 피사체를 가운데에 두고 촬영자가 360도로 회전하며 영상을 수집합니다. | 
+| 2️⃣ | N * RGB 이미지 세트  | 비디오를 샘플링하여 이미지들을 얻어냅니다. |
+| 3️⃣ | N * 카메라 포즈 세트  | 카메라 포즈는 NeRF 학습에 필요합니다.<br>2️⃣ 에서 샘플링된 이미지들에 LLFF를 수행합니다. |
+| 4️⃣ | 학습된 NeRF 모델 파일 | NeRF 모델을 학습시킵니다.<br>NeRF 모델에 담긴 3D 표현을 **implicit 3D 표현**이라고 합니다. |
+| 5️⃣ | 메쉬 오브젝트 파일    | implicit 3D 표현에 메쉬를 적용합니다.<br>**'explicit' 3D 표현**의 형태로 변환합니다. |
+| 6️⃣ | 3D 프린터 인쇄 파일      | 슬라이서 소프트웨어를 이용합니다.<br>3D 프린터의 파라미터를 세팅하고 인쇄 준비를 마칩니다. |
+| 6️⃣ | 3D 프린터로 출력한 피규어  | 3D 프린터로 최종 결과물을 뽑아냅니다. |
 
-<br/>
+아래에서는 파이프라인 각각에 대해 설명합니다.
+
+<br>
 
 <a name="step1"></a>
 ## 1️⃣ 피사체 동영상 촬영하기
-`TODO`: images 파일에 올리고 연결해줘야 함
+
 <table>
 <thead align="center">
   <tr>
@@ -96,9 +134,11 @@
 
 ➕ 촬영 권장사항과 주의사항은 <a href="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/GUIDELINE.md#step1">다음</a>을 확인해주세요!
 
+<br>
+
 <a name="step2"></a>
 ## 2️⃣ 비디오로부터 이미지 샘플링하기
-`TODO`: images 파일에 올리고 연결해줘야 함
+
 <p style="text-align:center;">
 <a href="https://colab.research.google.com/github/yyongjae/PlankHyundong/blob/main/notebooks/sampling_colab.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
@@ -106,16 +146,16 @@
 
 <p align="center"><img src="https://github.com/ProtossDragoon/PlankHyundong/blob/7fe9587f7c9c2752f5898dd41df171b86fe962d6/docs/images/video_sampling.gif" width="400" height="225"></p>
 
-스크립트를 이용하여 촬영한 비디오를 이미지로 등간격 샘플링합니다.
-
+- 스크립트를 이용해 촬영한 비디오를 이미지로 등간격 샘플링합니다.
 - ✅ 카메라 트래젝토리가 길다면 더 잘게 잘라 주는 것이 좋습니다.
 - ❗ 카메라 트래젝토리가 짧고 렌즈를 열어두는 시간이 짧은 경우, 동영상으로부터 이미지를 너무 잘게 샘플링한다면 성능에 악영향을 미칠 수 있습니다.
 
 ➕ 자세한 파라미터는 <a href="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/GUIDELINE.md#step2">다음</a>을 확인해주세요!
 
+<br>
+
 <a name="step3"></a>
 ## 3️⃣ 이미지에 대한 카메라 포즈 구하기
-`TODO`: 이미지 추가 및 images 파일에 올리고 연결해줘야 함
 
 <p style="text-align:center;">
 <a href="https://colab.research.google.com/github/ProtossDragoon/PlankHyundong/blob/main/notebooks/colmap_colab.ipynb">
@@ -124,13 +164,15 @@
 
 **NOTE:** 반드시 GPU 런타임을 사용해야 합니다.
 
-NeRF 의 입력은 (이미지, 카메라포즈) 의 집합입니다. 커스텀 이미지로부터 이미지 각각에 해당하는 카메라 포즈를 계산하기 위해 [COLMAP](https://github.com/colmap/colmap)을 기반으로 동작하는 [LLFF](https://github.com/Fyusion/LLFF) 저자의 스크립트를 사용합니다. 
+<p align="center"><img src="https://github.com/ProtossDragoon/PlankHyundong/blob/85638bda940f10d00839e656b4f9f487f9742aa8/docs/images/camera_poses.png"></p>
 
-<p align="center"><img src="https://github.com/ProtossDragoon/PlankHyundong/blob/85638bda940f10d00839e656b4f9f487f9742aa8/docs/images/camera_poses.png" width="800" height="450"></p>
-
-실행이 완료되면 데이터셋 폴더 안에 NeRF 모델을 실행시키는 데 필요한 `poses_bounds.npy` 파일이 생성됩니다.
+- NeRF 의 입력은 (이미지, 카메라포즈) 의 집합입니다. 
+- 커스텀 이미지로부터 이미지 각각에 해당하는 카메라 포즈를 계산하기 위해 [COLMAP](https://github.com/colmap/colmap)을 기반으로 동작하는 [LLFF](https://github.com/Fyusion/LLFF) 저자의 스크립트를 사용합니다. 
+- 실행이 완료되면 데이터셋 폴더 안에 NeRF 모델을 실행시키는 데 필요한 `poses_bounds.npy` 파일이 생성됩니다.
 
 ➕ LLFF 환경 구축에 어려움이 생기면 <a href="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/GUIDELINE.md#step3">다음</a>을 확인해주세요!
+
+<br>
 
 <a name="step4"></a>
 ## 4️⃣ NeRF 모델 학습시키기
@@ -168,6 +210,8 @@ NeRF 의 입력은 (이미지, 카메라포즈) 의 집합입니다. 커스텀 �
 
 ➕ wandb 연동과 nerf 파라미터 실험 결과를 알고 싶다면 <a href="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/GUIDELINE.md#step4">다음</a>을 확인해주세요!
 
+<br>
+
 <a name="step5"></a>
 ## 5️⃣ NeRF 모델로부터 Mesh 만들고 다듬기
 
@@ -180,24 +224,26 @@ NeRF 의 입력은 (이미지, 카메라포즈) 의 집합입니다. 커스텀 �
 
 **NOTE:** 반드시 GPU 런타임을 사용해야 합니다.
 
-NeRF 모델로 학습시킨 학습시킨 모델을 로드한 뒤, `PyMCubes` 패키지를 통해 표면(iso-surface)을 추출하고 그 결과물인 `3d.obj` 파일을  저장하는 단계입니다. 이 노트북의 출처는 [NeRF 공식 저장소](https://github.com/bmild/nerf/blob/master/extract_mesh.ipynb)입니다.
- 
-- 위 노트북에서는 학습된 NeRF 모델의 3D 표현(implicit representation)을 시각화 하기 위해 `pyrender` 을 이용해 `turntable.mp4` 영상을 생성합니다.
-
 <p align="center"><img src="https://github.com/ProtossDragoon/PlankHyundong/blob/7fe9587f7c9c2752f5898dd41df171b86fe962d6/docs/images/meshed_representation.gif" width="400" height="225"></p>
+
+- NeRF 모델로 학습시킨 학습시킨 모델을 로드한 뒤, `PyMCubes` 패키지를 통해 표면(iso-surface)을 추출하고 그 결과물인 `3d.obj` 파일을 저장하는 단계입니다. 
+- 학습된 NeRF 모델의 3D 표현(implicit representation)을 시각화 하기 위해 `pyrender` 을 이용해 `turntable.mp4` 영상을 생성합니다.
+- 이 노트북의 출처는 [NeRF 공식 저장소](https://github.com/bmild/nerf/blob/master/extract_mesh.ipynb)입니다.
 
 ### Mesh 다듬기
 <p align="center"><img src="https://github.com/ProtossDragoon/PlankHyundong/blob/7fe9587f7c9c2752f5898dd41df171b86fe962d6/docs/images/trim_mesh_case_without_background.jpg" width="400" height="225"></p>
 
-데이터를 직접 수집하였기 때문에 추출한 mesh에 노이즈가 많아, 3d 프린터로 출력 전 blender로 직접 노이즈를 제거해주었다.
+- 시뮬레이터를 통해 수집한 데이터가 아니라 직접 수집한 데이터를 통해 NeRF 모델을 학습시켰기 때문에 추출한 mesh에 노이즈가 많을 수 있습니다.
+- 이 경우 3d 프린터로 출력 전 blender로 직접 노이즈를 제거해주어야 합니다.
 
-
-➕ mesh renderer 파라미터 실험 결과와 데이터에 따른 mesh 다듬기 유의사항을 알고 싶다면, <a href="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/GUIDELINE.md#step5">다음</a>을 확인해주세요!
+➕ 메쉬 만들기와 관련된 파라미터의 실험 결과와 데이터에 따른 mesh 다듬기 유의사항을 알고 싶다면, <a href="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/GUIDELINE.md#step5">다음</a>을 확인해주세요!
 
 <br>
 
 <a name="step6"></a>
-## 6️⃣ 피규어 인쇄하기
+## 6️⃣ 피규어 인쇄하고 후가공하기
+
+### 피규어 인쇄하기
 <table>
 <thead align="center">
   <tr>
@@ -212,6 +258,8 @@ NeRF 모델로 학습시킨 학습시킨 모델을 로드한 뒤, `PyMCubes` 패
   </tr>
 </tbody>
 </table>
+
+➕ 3D 프린터 옵션 실험 결과를 알고 싶다면 <a href="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/GUIDELINE.md#step6">다음</a>을 확인해주세요!
 
 ### 인쇄된 피규어 후가공하기
 <table>
@@ -231,8 +279,6 @@ NeRF 모델로 학습시킨 학습시킨 모델을 로드한 뒤, `PyMCubes` 패
 </tbody>
 </table>
 
-➕ 3D 프린터 옵션 실험 결과를 알고 싶다면 <a href="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/GUIDELINE.md#step6">다음</a>을 확인해주세요!
-
 <br>
 
 <a name="env"></a>
@@ -250,8 +296,8 @@ NeRF 모델로 학습시킨 학습시킨 모델을 로드한 뒤, `PyMCubes` 패
 <thead align="center">
   <tr>
     <th>Google COLAB</th>
-    <th>Wandb</th>
-    <th>Tensorflow</th>
+    <th>WandB</th>
+    <th>Tensorflow (1.15.x)</th>
   </tr>
 </thead>
 <tbody align="center">
@@ -280,6 +326,7 @@ NeRF 모델로 학습시킨 학습시킨 모델을 로드한 뒤, `PyMCubes` 패
 </tbody>
 </table>
 
+<br>
 
 <a name="team"></a>
 # 팀
