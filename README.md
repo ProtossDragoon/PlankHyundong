@@ -128,8 +128,7 @@
 
 <p align="center"><img src="https://github.com/ProtossDragoon/PlankHyundong/blob/7fe9587f7c9c2752f5898dd41df171b86fe962d6/docs/images/video_sampling.gif" width="400" height="225"></p>
 
-스크립트를 이용하여 촬영한 비디오를 이미지로 등간격 샘플링합니다.
-
+- 스크립트를 이용해 촬영한 비디오를 이미지로 등간격 샘플링합니다.
 - ✅ 카메라 트래젝토리가 길다면 더 잘게 잘라 주는 것이 좋습니다.
 - ❗ 카메라 트래젝토리가 짧고 렌즈를 열어두는 시간이 짧은 경우, 동영상으로부터 이미지를 너무 잘게 샘플링한다면 성능에 악영향을 미칠 수 있습니다.
 
@@ -147,11 +146,11 @@
 
 **NOTE:** 반드시 GPU 런타임을 사용해야 합니다.
 
-NeRF 의 입력은 (이미지, 카메라포즈) 의 집합입니다. 커스텀 이미지로부터 이미지 각각에 해당하는 카메라 포즈를 계산하기 위해 [COLMAP](https://github.com/colmap/colmap)을 기반으로 동작하는 [LLFF](https://github.com/Fyusion/LLFF) 저자의 스크립트를 사용합니다. 
-
 <p align="center"><img src="https://github.com/ProtossDragoon/PlankHyundong/blob/85638bda940f10d00839e656b4f9f487f9742aa8/docs/images/camera_poses.png"></p>
 
-실행이 완료되면 데이터셋 폴더 안에 NeRF 모델을 실행시키는 데 필요한 `poses_bounds.npy` 파일이 생성됩니다.
+- NeRF 의 입력은 (이미지, 카메라포즈) 의 집합입니다. 
+- 커스텀 이미지로부터 이미지 각각에 해당하는 카메라 포즈를 계산하기 위해 [COLMAP](https://github.com/colmap/colmap)을 기반으로 동작하는 [LLFF](https://github.com/Fyusion/LLFF) 저자의 스크립트를 사용합니다. 
+- 실행이 완료되면 데이터셋 폴더 안에 NeRF 모델을 실행시키는 데 필요한 `poses_bounds.npy` 파일이 생성됩니다.
 
 ➕ LLFF 환경 구축에 어려움이 생기면 <a href="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/GUIDELINE.md#step3">다음</a>을 확인해주세요!
 
@@ -207,16 +206,17 @@ NeRF 의 입력은 (이미지, 카메라포즈) 의 집합입니다. 커스텀 �
 
 **NOTE:** 반드시 GPU 런타임을 사용해야 합니다.
 
-NeRF 모델로 학습시킨 학습시킨 모델을 로드한 뒤, `PyMCubes` 패키지를 통해 표면(iso-surface)을 추출하고 그 결과물인 `3d.obj` 파일을  저장하는 단계입니다. 이 노트북의 출처는 [NeRF 공식 저장소](https://github.com/bmild/nerf/blob/master/extract_mesh.ipynb)입니다.
- 
-- 위 노트북에서는 학습된 NeRF 모델의 3D 표현(implicit representation)을 시각화 하기 위해 `pyrender` 을 이용해 `turntable.mp4` 영상을 생성합니다.
-
 <p align="center"><img src="https://github.com/ProtossDragoon/PlankHyundong/blob/7fe9587f7c9c2752f5898dd41df171b86fe962d6/docs/images/meshed_representation.gif" width="400" height="225"></p>
+
+- NeRF 모델로 학습시킨 학습시킨 모델을 로드한 뒤, `PyMCubes` 패키지를 통해 표면(iso-surface)을 추출하고 그 결과물인 `3d.obj` 파일을 저장하는 단계입니다. 
+- 학습된 NeRF 모델의 3D 표현(implicit representation)을 시각화 하기 위해 `pyrender` 을 이용해 `turntable.mp4` 영상을 생성합니다.
+- 이 노트북의 출처는 [NeRF 공식 저장소](https://github.com/bmild/nerf/blob/master/extract_mesh.ipynb)입니다.
 
 ### Mesh 다듬기
 <p align="center"><img src="https://github.com/ProtossDragoon/PlankHyundong/blob/7fe9587f7c9c2752f5898dd41df171b86fe962d6/docs/images/trim_mesh_case_without_background.jpg" width="400" height="225"></p>
 
-데이터를 직접 수집하였기 때문에 추출한 mesh에 노이즈가 많아, 3d 프린터로 출력 전 blender로 직접 노이즈를 제거해주었다.
+- 시뮬레이터를 통해 수집한 데이터가 아니라 직접 수집한 데이터를 통해 NeRF 모델을 학습시켰기 때문에 추출한 mesh에 노이즈가 많을 수 있습니다.
+- 이 경우 3d 프린터로 출력 전 blender로 직접 노이즈를 제거해주어야 합니다.
 
 ➕ mesh renderer 파라미터 실험 결과와 데이터에 따른 mesh 다듬기 유의사항을 알고 싶다면, <a href="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/GUIDELINE.md#step5">다음</a>을 확인해주세요!
 
