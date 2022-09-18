@@ -100,7 +100,7 @@
 ## 2️⃣ 비디오로부터 이미지 샘플링하기
 `TODO`: images 파일에 올리고 연결해줘야 함
 <p style="text-align:center;">
-<a href="https://colab.research.google.com/github/ProtossDragoon/PlankHyundong/blob/main/notebooks/sampling_colab.ipynb">
+<a href="https://colab.research.google.com/github/yyongjae/PlankHyundong/blob/main/notebooks/sampling_colab.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a></p>
 
