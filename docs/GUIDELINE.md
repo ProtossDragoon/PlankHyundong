@@ -473,4 +473,6 @@ NeRF 모델로 학습시킨 학습시킨 모델을 로드한 뒤, `PyMCubes` 패
 - 특히 유의미했던 고민들
   - [‘3D 화 한다’ 에 대한 명확한 기준 설정하기](https://www.notion.so/janghoo/3D-e0ca0bd17dd447728b06c236e9abd56f)
 
-![logo-color.png](https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/logo_background.png )
+![team.jpeg](https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/team.jpeg)
+
+![logo-color.png](https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/images/logo_background.png)
