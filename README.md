@@ -60,6 +60,24 @@
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a></p>
 
+```
+PlankHyundong/
+├── nerf_quick_start.ipynb
+├── notebooks
+│   ├── nerf_colab.ipynb
+│   ├── nerf_wandb_colab.ipynb
+│   ├── colmap_colab.ipynb
+│   ├── extract_mesh_colab.ipynb
+│   └── sampling_colab.ipynb
+└── data
+    ├── video
+    │   └── video.MOV
+    ├── (images)
+    │   └── ...
+    └── (logs)
+        └── ...
+```
+
 - **notebook** 폴더에는 최종 결과물을 만드는 파이프라인에 필요한 노트북이 각각 저장되어 있습니다.
 - 전체 워크플로를 빠르게 훑어볼 수 있도록 **`nerf_quick_start.ipynb`** 이라는 단일 노트북을 제공합니다.
 - **`nerf_quick_start.ipynb`** 은 총 4단계로 이루어져 있으며 구성은 다음과 같습니다.<br>
