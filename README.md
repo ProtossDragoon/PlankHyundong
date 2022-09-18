@@ -218,7 +218,7 @@
 - 시뮬레이터를 통해 수집한 데이터가 아니라 직접 수집한 데이터를 통해 NeRF 모델을 학습시켰기 때문에 추출한 mesh에 노이즈가 많을 수 있습니다.
 - 이 경우 3d 프린터로 출력 전 blender로 직접 노이즈를 제거해주어야 합니다.
 
-➕ mesh renderer 파라미터 실험 결과와 데이터에 따른 mesh 다듬기 유의사항을 알고 싶다면, <a href="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/GUIDELINE.md#step5">다음</a>을 확인해주세요!
+➕ 메쉬 만들기와 관련된 파라미터의 실험 결과와 데이터에 따른 mesh 다듬기 유의사항을 알고 싶다면, <a href="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/GUIDELINE.md#step5">다음</a>을 확인해주세요!
 
 <br>
 
