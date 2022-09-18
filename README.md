@@ -23,8 +23,8 @@
 <table>
 <thead align="center">
   <tr>
-    <th>최종 결과물, <a href="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/GUIDELINE.md#evaluation">결과물 정성평가</a> </th>
-    <th>NeRF 표현</th>
+    <th>최종 결과물 (실제 피규어), <a href="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/GUIDELINE.md#evaluation">결과물 정성평가</a> </th>
+    <th>NeRF 3D 표현</th>
   </tr>
 </thead>
 <tbody align="center">
