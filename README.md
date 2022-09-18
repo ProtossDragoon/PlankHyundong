@@ -40,7 +40,25 @@
 
 <a name="quickstart"></a>
 # 빠른 시작
-`TODO`
+
+<p style="text-align:center;">
+<a href="https://colab.research.google.com/github/yyongjae/PlankHyundong/blob/main/nerf_quick_start.ipynb">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+</a></p>
+
+
+**notebook** 폴더에 있는 여러 기능의 노트북들을 한번에 실행할 수 있게 **nerf_quick_start.ipynb** 노트북을 만들었다.
+총 4단계로 이루어져 있으며 구성은 다음과 같다.<br>
+
+- [1️⃣ Video Sampling : 비디오로부터 이미지 샘플링하기](#step1)
+- [2️⃣ Run COLMAP to get camera pose : 이미지에 대한 카메라 포즈 구하기](#step2)
+- [3️⃣ Run NeRF : NeRF 모델 학습시키기](#step3)
+- [4️⃣ Get Mesh file : NeRF 모델로부터 Mesh 만들고 다듬기](#step4)
+
+필요한 데이터는 `data/video/video.MOV`의 경로에 있다.
+처음 부분에 해당 폴더를 clone받는 셀을 추가해두었다. 
+위의 폴더에 `images`, `logs`라는 하위 폴더를 생성하게 되는데, 각 폴더에는 샘플링한 이미지들과 config, mesh, weight 및 영상 파일 등이 저장된다.
+
 
 <a name="start"></a>
 # 구성요소별로 시작하기
@@ -272,7 +290,7 @@ NeRF 모델로 학습시킨 학습시킨 모델을 로드한 뒤, `PyMCubes` 패
 <table>
   <tbody>
     <tr>
-      <td align="center"><a href="http://dydwo706@gmail.com"><img src="https://avatars.githubusercontent.com/u/55885072?v=4?s=100" width="100px;" alt=""/><br /><sub><b>YongJae Cho</b></sub></a><br /><a href="#maintenance-yyongjae" title="Maintenance">🚧</a></td>
+      <td align="center"><a href="http://dydwo706@gmail.com"><img src="https://avatars.githubusercontent.com/u/55885072?v=4?s=100" width="100px;" alt=""/><br /><sub><b>YongJae Cho</b></sub></a><br /><a href="https://github.com/ProtossDragoon/PlankHyundong/commits?author=yyongjae" title="Documentation">📖</a> <a href="https://github.com/ProtossDragoon/PlankHyundong/commits?author=yyongjae" title="Code">💻</a></td>
       <td align="center"><a href="https://github.com/dusruddl2"><img src="https://avatars.githubusercontent.com/u/81481259?v=4?s=100" width="100px;" alt=""/><br /><sub><b>dusruddl2</b></sub></a><br /><a href="https://github.com/ProtossDragoon/PlankHyundong/commits?author=dusruddl2" title="Documentation">📖</a> <a href="https://github.com/ProtossDragoon/PlankHyundong/commits?author=dusruddl2" title="Code">💻</a></td>
       <td align="center"><a href="https://github.com/Sumyeong-Jang"><img src="https://avatars.githubusercontent.com/u/50583200?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sumyeong-Jang</b></sub></a><br /><a href="https://github.com/ProtossDragoon/PlankHyundong/commits?author=Sumyeong-Jang" title="Documentation">📖</a> <a href="https://github.com/ProtossDragoon/PlankHyundong/commits?author=Sumyeong-Jang" title="Code">💻</a></td>
       <td align="center"><a href="https://davincijang.space/"><img src="https://avatars.githubusercontent.com/u/46595649?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Janghoo Lee</b></sub></a><br /><a href="https://github.com/ProtossDragoon/PlankHyundong/commits?author=ProtossDragoon" title="Documentation">📖</a> <a href="https://github.com/ProtossDragoon/PlankHyundong/commits?author=ProtossDragoon" title="Code">💻</a></td>
