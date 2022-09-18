@@ -296,7 +296,7 @@ PlankHyundong/
 <thead align="center">
   <tr>
     <th>Google COLAB</th>
-    <th>Wandb</th>
+    <th>WandB</th>
     <th>Tensorflow (1.15.x)</th>
   </tr>
 </thead>
