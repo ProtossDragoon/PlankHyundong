@@ -56,8 +56,8 @@
 - [4️⃣ Get Mesh file : NeRF 모델로부터 Mesh 만들고 다듬기](#step4)
 
 필요한 데이터는 `data/video/video.MOV`의 경로에 있다.
-처음 부분에 해당 폴더를 clone받는 셀을 추가해두었다.
-`data/images` 폴더에는 샘플링한 이미지들이 저장되고, `data/logs` 폴더에는 config.txt, mesh.obj, weight 및 영상 파일 등이 저장된다.
+처음 부분에 해당 폴더를 clone받는 셀을 추가해두었다. 
+위의 폴더에 `images`, `logs`라는 하위 폴더를 생성하게 되는데, 각 폴더에는 샘플링한 이미지들과 config, mesh, weight 및 영상 파일 등이 저장된다.
 
 
 <a name="start"></a>
@@ -290,7 +290,7 @@ NeRF 모델로 학습시킨 학습시킨 모델을 로드한 뒤, `PyMCubes` 패
 <table>
   <tbody>
     <tr>
-      <td align="center"><a href="http://dydwo706@gmail.com"><img src="https://avatars.githubusercontent.com/u/55885072?v=4?s=100" width="100px;" alt=""/><br /><sub><b>YongJae Cho</b></sub></a><br /><a href="#maintenance-yyongjae" title="Maintenance">🚧</a></td>
+      <td align="center"><a href="http://dydwo706@gmail.com"><img src="https://avatars.githubusercontent.com/u/55885072?v=4?s=100" width="100px;" alt=""/><br /><sub><b>YongJae Cho</b></sub></a><br /><a href="https://github.com/ProtossDragoon/PlankHyundong/commits?author=yyongjae" title="Documentation">📖</a> <a href="https://github.com/ProtossDragoon/PlankHyundong/commits?author=yyongjae" title="Code">💻</a></td>
       <td align="center"><a href="https://github.com/dusruddl2"><img src="https://avatars.githubusercontent.com/u/81481259?v=4?s=100" width="100px;" alt=""/><br /><sub><b>dusruddl2</b></sub></a><br /><a href="https://github.com/ProtossDragoon/PlankHyundong/commits?author=dusruddl2" title="Documentation">📖</a> <a href="https://github.com/ProtossDragoon/PlankHyundong/commits?author=dusruddl2" title="Code">💻</a></td>
       <td align="center"><a href="https://github.com/Sumyeong-Jang"><img src="https://avatars.githubusercontent.com/u/50583200?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sumyeong-Jang</b></sub></a><br /><a href="https://github.com/ProtossDragoon/PlankHyundong/commits?author=Sumyeong-Jang" title="Documentation">📖</a> <a href="https://github.com/ProtossDragoon/PlankHyundong/commits?author=Sumyeong-Jang" title="Code">💻</a></td>
       <td align="center"><a href="https://davincijang.space/"><img src="https://avatars.githubusercontent.com/u/46595649?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Janghoo Lee</b></sub></a><br /><a href="https://github.com/ProtossDragoon/PlankHyundong/commits?author=ProtossDragoon" title="Documentation">📖</a> <a href="https://github.com/ProtossDragoon/PlankHyundong/commits?author=ProtossDragoon" title="Code">💻</a></td>
