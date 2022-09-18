@@ -60,17 +60,20 @@
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a></p>
 
-**notebook** 폴더에 있는 여러 기능의 노트북들을 한번에 실행할 수 있게 **`nerf_quick_start.ipynb`** 노트북을 만들었다.
-총 4단계로 이루어져 있으며 구성은 다음과 같다.<br>
+- **notebook** 폴더에는 최종 결과물을 만드는 파이프라인에 필요한 노트북이 각각 저장되어 있습니다.
+- 전체 워크플로를 빠르게 훑어볼 수 있도록 **`nerf_quick_start.ipynb`** 이라는 단일 노트북을 제공합니다.
+- **`nerf_quick_start.ipynb`** 은 총 4단계로 이루어져 있으며 구성은 다음과 같습니다.<br>
 
-- [1️⃣ Video Sampling : 비디오로부터 이미지 샘플링하기](#step1)
-- [2️⃣ Run COLMAP to get camera pose : 이미지에 대한 카메라 포즈 구하기](#step2)
-- [3️⃣ Run NeRF : NeRF 모델 학습시키기](#step3)
-- [4️⃣ Get Mesh file : NeRF 모델로부터 Mesh 만들고 다듬기](#step4)
+| step | content |
+|:--:|:-----:|
+| 1️ | [Video Sampling : 비디오로부터 이미지 샘플링하기](#step1) | 
+| 2️ | [Run COLMAP to get camera pose : 이미지에 대한 카메라 포즈 구하기](#step2) |
+| 3️ | [Run NeRF : NeRF 모델 학습시키기](#step3) |
+| 4️ | [Get Mesh file : NeRF 모델로부터 Mesh 만들고 다듬기](#step4) |
 
-필요한 데이터는 `data/video/video.MOV`의 경로에 있다.
-처음 부분에 해당 폴더를 clone받는 셀을 추가해두었다. 
-위의 폴더에 `images`, `logs`라는 하위 폴더를 생성하게 되는데, 각 폴더에는 샘플링한 이미지들과 config, mesh, weight 및 영상 파일 등이 저장된다.
+- 필요한 데이터는 `data/video/video.MOV`의 경로에 있습니다.
+- 처음 부분에 해당 폴더를 clone받는 셀을 추가해두었습니다. 
+- 위 폴더에 `images`, `logs`라는 하위 폴더를 생성합니다. 각 폴더에는 샘플링한 이미지들과 config, mesh, weight 및 영상 파일 등이 저장됩니다.
 
 <br>
 
@@ -215,7 +218,6 @@ NeRF 모델로 학습시킨 학습시킨 모델을 로드한 뒤, `PyMCubes` 패
 
 데이터를 직접 수집하였기 때문에 추출한 mesh에 노이즈가 많아, 3d 프린터로 출력 전 blender로 직접 노이즈를 제거해주었다.
 
-
 ➕ mesh renderer 파라미터 실험 결과와 데이터에 따른 mesh 다듬기 유의사항을 알고 싶다면, <a href="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/GUIDELINE.md#step5">다음</a>을 확인해주세요!
 
 <br>
@@ -239,6 +241,8 @@ NeRF 모델로 학습시킨 학습시킨 모델을 로드한 뒤, `PyMCubes` 패
 </tbody>
 </table>
 
+➕ 3D 프린터 옵션 실험 결과를 알고 싶다면 <a href="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/GUIDELINE.md#step6">다음</a>을 확인해주세요!
+
 ### 인쇄된 피규어 후가공하기
 <table>
 <thead align="center">
@@ -256,8 +260,6 @@ NeRF 모델로 학습시킨 학습시킨 모델을 로드한 뒤, `PyMCubes` 패
   </tr>
 </tbody>
 </table>
-
-➕ 3D 프린터 옵션 실험 결과를 알고 싶다면 <a href="https://github.com/ProtossDragoon/PlankHyundong/blob/docs/docs/GUIDELINE.md#step6">다음</a>을 확인해주세요!
 
 <br>
 
