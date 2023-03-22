@@ -12,7 +12,7 @@
 
 # 플랭크현동 가이드라인
 
-이 문서는 [README.md](https://github.com/ProtossDragoon/PlankHyundong/blob/docs/README.md) 가 다루지 못한 구체적인 내용을 포함하고 있습니다.
+이 문서는 [README.md](https://github.com/ProtossDragoon/PlankHyundong/blob/main/README.md) 가 다루지 못한 구체적인 내용을 포함하고 있습니다.
 
 ## 결과물
 
