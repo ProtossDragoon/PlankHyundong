@@ -16,6 +16,8 @@
 # 플랭크 현동 3D
 헬스보이 현동이가 알려주는 정확한 플랭크 자세! 헬창이 되고 싶은 사람들은 **NeRF모델을 이용해 뽑은, 현동이 피규어**를 요리조리 살펴보고 자신과 비교하며 운동해보는건 어떨까? 🏋🏻
 
+[데이터야놀자 2022 프로젝트 설명 발표영상](https://www.youtube.com/watch?v=s7k_cZi7hvw) / [발표자료](https://drive.google.com/file/d/1XrWcYmuNC0rZVPC8ese5gtJTMicKKRcs/edit)
+
 <br>
 
 ## 최종 결과물
