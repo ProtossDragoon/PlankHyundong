@@ -11,6 +11,12 @@
 
 </div>
 
+<p align="center">
+
+[🇰🇷 한국어](https://github.com/ProtossDragoon/PlankHyundong/blob/main/README.md) / [🇬🇧 English](https://github.com/ProtossDragoon/PlankHyundong/blob/main/README_ENG.md)
+
+</p>
+
 <br>
 
 # 플랭크 현동 3D
