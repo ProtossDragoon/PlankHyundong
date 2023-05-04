@@ -78,6 +78,17 @@ PlankHyundong/
 - A single notebook, **`nerf_quick_start.ipynb`**, is provided for quickly reviewing the entire workflow.
 - The **data** folder contains the pseudo-depth video and the results of each step of the pipeline.
 
+| Step | Content |
+|:--:|:-----:|
+| 1️⃣ | [Video Sampling: Sampling Images from a Video](#step1) |
+| 2️⃣ | [Run COLMAP to get camera pose: Obtaining Camera Pose for Images](#step2) |
+| 3️⃣ | [Run NeRF: Training the NeRF Model](#step3) |
+| 4️⃣ | [Get Mesh file: Creating and Refining Mesh from the NeRF Model](#step4) |
+
+- The required data can be found at `data/video/video.MOV`.
+- A cell to clone the folder has been added at the beginning.
+- Create subfolders named `images` and `logs` in the above folder. Each folder will store sampled images, config, mesh, weight, video files, etc.
+
 <a name="start"></a>
 # Getting Started by Component
 
