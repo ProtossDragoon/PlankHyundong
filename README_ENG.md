@@ -325,9 +325,6 @@ Below is an explanation of each step in the pipeline.
 <a name="team"></a>
 # Team
 
-<a name="team"></a>
-# Team
-
 - This project follows the [all-contributors specification](https://github.com/all-contributors/all-contributors) and welcomes any contributions!
 - [Sejong University Artificial Intelligence Club (SAI)](https://github.com/sju-coml/SAI)
 - [Project Kanban](https://www.notion.so/janghoo/21fcf2a58bd0412d98750e92156b728b?v=fb1550801bd94e748c1f13bc2c12c51b)
