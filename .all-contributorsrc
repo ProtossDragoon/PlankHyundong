@@ -55,22 +55,41 @@
       ]
     },
     {
-      "login": "chuchu275",
-      "name": "Seung-Jun Chu",
-      "avatar_url": "https://avatars.githubusercontent.com/u/111113693?v=4",
-      "profile": "http://sjchu.co.kr",
+      "login": "yunimini",
+      "name": "yunimini",
+      "avatar_url": "https://avatars.githubusercontent.com/u/125262606?v=4",
+      "profile": "https://github.com/yunimini",
       "contributions": [
         "code"
       ]
     },
     {
+      "login": "chuchu275",
+      "name": "Seung-Jun Chu",
+      "avatar_url": "https://avatars.githubusercontent.com/u/111113693?v=4",
+      "profile": "http://sjchu.co.kr",
+      "contributions": [
+        "code",
+        "maintenance"
+      ]
+    },
+    {
       "login": "Heeheegwan",
-      "name": "Heeheegwan",
+      "name": "Heeheaegwan",
       "avatar_url": "https://avatars.githubusercontent.com/u/178976521?v=4",
       "profile": "https://github.com/Heeheegwan",
       "contributions": [
         "code",
         "maintenance"
+      ]
+    },
+    {
+      "login": "namsuhan-hub",
+      "name": "namsuhan-hub",
+      "avatar_url": "https://avatars.githubusercontent.com/u/178976632?v=4",
+      "profile": "https://github.com/namsuhan-hub",
+      "contributions": [
+        "code"
       ]
     }
   ],
