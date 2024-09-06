@@ -5,7 +5,7 @@
 <div align="center">
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FProtossDragoon%2FPlankHyundong&count_bg=%23FFA217&title_bg=%2345FFDE&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com) 
 
@@ -352,6 +352,9 @@ PlankHyundong/
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/cmoweg"><img src="https://avatars.githubusercontent.com/u/59383650?v=4?s=100" width="100px;" alt="cmoweg"/><br /><sub><b>cmoweg</b></sub></a><br /><a href="https://github.com/ProtossDragoon/PlankHyundong/commits?author=cmoweg" title="Documentation">📖</a> <a href="https://github.com/ProtossDragoon/PlankHyundong/commits?author=cmoweg" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://sjchu.co.kr"><img src="https://avatars.githubusercontent.com/u/111113693?v=4?s=100" width="100px;" alt="Seung-Jun Chu"/><br /><sub><b>Seung-Jun Chu</b></sub></a><br /><a href="https://github.com/ProtossDragoon/PlankHyundong/commits?author=chuchu275" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Heeheegwan"><img src="https://avatars.githubusercontent.com/u/178976521?v=4?s=100" width="100px;" alt="Heeheegwan"/><br /><sub><b>Heeheegwan</b></sub></a><br /><a href="https://github.com/ProtossDragoon/PlankHyundong/commits?author=Heeheegwan" title="Code">💻</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/namsuhan-hub"><img src="https://avatars.githubusercontent.com/u/178976632?v=4?s=100" width="100px;" alt="namsuhan-hub"/><br /><sub><b>namsuhan-hub</b></sub></a><br /><a href="https://github.com/ProtossDragoon/PlankHyundong/commits?author=namsuhan-hub" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
