@@ -5,7 +5,7 @@
 <div align="center">
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FProtossDragoon%2FPlankHyundong&count_bg=%23FFA217&title_bg=%2345FFDE&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com) 
 
@@ -345,11 +345,12 @@ PlankHyundong/
 <table>
   <tbody>
     <tr>
-      <td align="center"><a href="http://dydwo706@gmail.com"><img src="https://avatars.githubusercontent.com/u/55885072?v=4?s=100" width="100px;" alt=""/><br /><sub><b>YongJae Cho</b></sub></a><br /><a href="https://github.com/ProtossDragoon/PlankHyundong/commits?author=yyongjae" title="Documentation">📖</a> <a href="https://github.com/ProtossDragoon/PlankHyundong/commits?author=yyongjae" title="Code">💻</a></td>
-      <td align="center"><a href="https://github.com/dusruddl2"><img src="https://avatars.githubusercontent.com/u/81481259?v=4?s=100" width="100px;" alt=""/><br /><sub><b>dusruddl2</b></sub></a><br /><a href="https://github.com/ProtossDragoon/PlankHyundong/commits?author=dusruddl2" title="Documentation">📖</a> <a href="https://github.com/ProtossDragoon/PlankHyundong/commits?author=dusruddl2" title="Code">💻</a></td>
-      <td align="center"><a href="https://github.com/Sumyeong-Jang"><img src="https://avatars.githubusercontent.com/u/50583200?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sumyeong-Jang</b></sub></a><br /><a href="https://github.com/ProtossDragoon/PlankHyundong/commits?author=Sumyeong-Jang" title="Documentation">📖</a> <a href="https://github.com/ProtossDragoon/PlankHyundong/commits?author=Sumyeong-Jang" title="Code">💻</a></td>
-      <td align="center"><a href="https://davincijang.space/"><img src="https://avatars.githubusercontent.com/u/46595649?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Janghoo Lee</b></sub></a><br /><a href="https://github.com/ProtossDragoon/PlankHyundong/commits?author=ProtossDragoon" title="Documentation">📖</a> <a href="https://github.com/ProtossDragoon/PlankHyundong/commits?author=ProtossDragoon" title="Code">💻</a></td>
-      <td align="center"><a href="https://github.com/cmoweg"><img src="https://avatars.githubusercontent.com/u/59383650?v=4?s=100" width="100px;" alt=""/><br /><sub><b>cmoweg</b></sub></a><br /><a href="https://github.com/ProtossDragoon/PlankHyundong/commits?author=cmoweg" title="Documentation">📖</a> <a href="https://github.com/ProtossDragoon/PlankHyundong/commits?author=cmoweg" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://dydwo706@gmail.com"><img src="https://avatars.githubusercontent.com/u/55885072?v=4?s=100" width="100px;" alt="YongJae Cho"/><br /><sub><b>YongJae Cho</b></sub></a><br /><a href="#maintenance-yyongjae" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/dusruddl2"><img src="https://avatars.githubusercontent.com/u/81481259?v=4?s=100" width="100px;" alt="dusruddl2"/><br /><sub><b>dusruddl2</b></sub></a><br /><a href="https://github.com/ProtossDragoon/PlankHyundong/commits?author=dusruddl2" title="Documentation">📖</a> <a href="https://github.com/ProtossDragoon/PlankHyundong/commits?author=dusruddl2" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Sumyeong-Jang"><img src="https://avatars.githubusercontent.com/u/50583200?v=4?s=100" width="100px;" alt="Sumyeong-Jang"/><br /><sub><b>Sumyeong-Jang</b></sub></a><br /><a href="https://github.com/ProtossDragoon/PlankHyundong/commits?author=Sumyeong-Jang" title="Documentation">📖</a> <a href="https://github.com/ProtossDragoon/PlankHyundong/commits?author=Sumyeong-Jang" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://davincijang.space/"><img src="https://avatars.githubusercontent.com/u/46595649?v=4?s=100" width="100px;" alt="Janghoo Lee"/><br /><sub><b>Janghoo Lee</b></sub></a><br /><a href="https://github.com/ProtossDragoon/PlankHyundong/commits?author=ProtossDragoon" title="Documentation">📖</a> <a href="https://github.com/ProtossDragoon/PlankHyundong/commits?author=ProtossDragoon" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/cmoweg"><img src="https://avatars.githubusercontent.com/u/59383650?v=4?s=100" width="100px;" alt="cmoweg"/><br /><sub><b>cmoweg</b></sub></a><br /><a href="https://github.com/ProtossDragoon/PlankHyundong/commits?author=cmoweg" title="Documentation">📖</a> <a href="https://github.com/ProtossDragoon/PlankHyundong/commits?author=cmoweg" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://sjchu.co.kr"><img src="https://avatars.githubusercontent.com/u/111113693?v=4?s=100" width="100px;" alt="Seung-Jun Chu"/><br /><sub><b>Seung-Jun Chu</b></sub></a><br /><a href="https://github.com/ProtossDragoon/PlankHyundong/commits?author=chuchu275" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
